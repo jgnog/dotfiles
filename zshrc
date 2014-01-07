@@ -26,6 +26,7 @@ export EDITOR='vim'
 
 # Aliases
 # Normal aliases
+alias aptinstall='sudo apt-get install'
 
 # Global aliases
 alias -g gp='| grep -i'
