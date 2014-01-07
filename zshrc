@@ -29,7 +29,7 @@ export EDITOR='vim'
 alias subs='subliminal -l pt -l pt-br -l en --'
 
 # Global aliases
-alias -e Gp='| grep -i'
+alias -g Gp='| grep -i'
 
 # Suffix aliases
 alias -s py=vim
