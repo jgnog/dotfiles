@@ -36,3 +36,4 @@ alias -s tex=vim
 
 # 'Function' aliases
 snippets () { cat ~/.vim/bundle/vim-snippets/snippets/$1.snippets }
+cheat () {evince documents/cheatsheets/$1.pdf}
