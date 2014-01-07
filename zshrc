@@ -26,6 +26,7 @@ export EDITOR='vim'
 
 # Aliases
 # Normal aliases
+alias subs='subliminal -l pt -l pt-br -l en --'
 
 # Global aliases
 alias -e Gp='| grep -i'
