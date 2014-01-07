@@ -26,7 +26,7 @@ export EDITOR='vim'
 
 # Aliases
 # Normal aliases
-alias aptinstall='sudo apt-get install'
+alias snippets='cd ~/.vim/bundle/vim-snippets/snippets && ls'
 
 # Global aliases
 alias -g gp='| grep -i'
