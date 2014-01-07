@@ -29,7 +29,6 @@ export EDITOR='vim'
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets && ls'
 
 # Global aliases
-alias -g gp='| grep -i'
 
 # Suffix aliases
 alias -s py=vim
