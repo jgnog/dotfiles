@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/jgnog/Dropbox/evpm/4. projectos/18 - grammys 2013/boletins'
+let g:netrw_dirhist_2='/home/jgnog/Dropbox/Projetos/Estágio/pesquisa_por_CAE'
+let g:netrw_dirhist_3='/home/jgnog/Dropbox/projetos/si-ala/sorteio-automatico'
+let g:netrw_dirhist_4='/home/jgnog/projects/bracketseeder/env/lib/python3.3'
+let g:netrw_dirhist_5='/home/jgnog/projects/bracketseeder/tests/models_tests'
+let g:netrw_dirhist_6='/home/jgnog/projects/fooddist/fooddist'
+let g:netrw_dirhist_7='/home/jgnog/.vim/bundle/python-mode/ftplugin'
+let g:netrw_dirhist_8='/home/jgnog/.pylint.d'
