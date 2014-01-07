@@ -1,2 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/jgnog/.oh-my-zsh'
+let g:netrw_dirhist_2='/home/jgnog/.oh-my-zsh/tools'
+let g:netrw_dirhist_3='/home/jgnog/.oh-my-zsh/templates'
+let g:netrw_dirhist_4='/home/jgnog/.oh-my-zsh/lib'
+let g:netrw_dirhist_5='/home/jgnog/.oh-my-zsh'
+let g:netrw_dirhist_6='/home/jgnog/.oh-my-zsh/lib'
+let g:netrw_dirhist_7='/home/jgnog/.oh-my-zsh'

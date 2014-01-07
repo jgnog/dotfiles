@@ -9,7 +9,7 @@ ZSH_THEME="bira"
 
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias ohmyzsh="cd ~/.oh-my-zsh"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -23,3 +23,13 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export EDITOR='vim'
+
+# Aliases
+# Normal aliases
+
+# Global aliases
+alias -g gp='| grep -i'
+
+# Suffix aliases
+alias -s py=vim
+alias -s tex=vim
