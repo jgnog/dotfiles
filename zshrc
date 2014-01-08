@@ -14,7 +14,7 @@ alias ohmyzsh="cd ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian cp extract)
+plugins=(git debian cp extract colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -28,12 +28,12 @@ export EDITOR='vim'
 # Normal aliases
 alias subs='subliminal -l pt -l pt-br -l en --'
 alias rm='rm -I'
+alias vimconfig='vim ~/.vimrc'
 
 # Global aliases
 alias -g Gp='| grep -i'
 
 # Suffix aliases
-alias -s py=vim
 alias -s tex=vim
 
 # 'Function' aliases
