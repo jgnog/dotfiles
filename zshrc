@@ -39,6 +39,7 @@ alias -g Gp='| grep -i'
 
 # Suffix aliases
 alias -s tex=vim
+alias -s pdf=evince
 
 # 'Function' aliases
 snippets () { cat ~/.vim/bundle/vim-snippets/snippets/$1.snippets }
