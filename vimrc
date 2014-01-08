@@ -128,3 +128,7 @@ let g:snips_github="github.com/jgnog"
 
 " Allow switching buffers without saving a file
 set hidden
+
+" Treat longlines as different lines
+nnoremap j gj
+nnoremap k gk
