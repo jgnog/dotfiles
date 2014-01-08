@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="bira"
 
 # Example aliases
-alias zshconfig="cd dotfiles && vim zshrc"
+alias zshconfig="cd ~/dotfiles && vim zshrc"
 alias ohmyzsh="cd ~/.oh-my-zsh"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -29,6 +29,7 @@ export EDITOR='vim'
 alias subs='subliminal -l pt -l pt-br -l en --'
 alias rm='rm -I'
 alias vimconfig='cd ~/dotfiles && vim vimrc'
+alias pomodoro='sh ~/scripts/timer.sh 25 "Pomodoro" "25 minutes left!" "Take a break!"'
 
 # Global aliases
 alias -g Gp='| grep -i'
