@@ -29,7 +29,10 @@ export EDITOR='vim'
 alias subs='subliminal -l pt -l pt-br -l en --'
 alias rm='rm -I'
 alias vimconfig='cd ~/dotfiles && vim vimrc'
-alias pomodoro='sh ~/scripts/timer.sh 25 "Pomodoro" "25 minutes left!" "Take a break!"'
+alias pomowork='sh ~/scripts/timer.sh 25 "Pomodoro" "25 minutes left!" "Take a break!"'
+alias pomobreak='sh ~/scripts/timer.sh 5 "Pomodoro short break" "5 minutes left!" "Get to work!"'
+alias pomolongbreak='sh ~/scripts/timer.sh 15 "Pomodoro long break" "15 minutes left!" "Get to work!"'
+alias pomosession='pomowork && pomobreak && pomowork && pomobreak && pomowork && pomobreak && pomowork && pomolongbreak'
 
 # Global aliases
 alias -g Gp='| grep -i'
