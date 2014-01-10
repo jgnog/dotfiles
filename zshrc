@@ -24,19 +24,31 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export EDITOR='vim'
 
-# Aliases
+#=====================#
+#                     #
+#      Aliases        #
+#                     #
+#=====================#
+
 # Normal aliases
+# ==============
 alias subs='subliminal -l pt -l pt-br -l en --'
 alias rm='rm -I'
 alias vimconfig='cd ~/dotfiles && vim vimrc'
+
+# Pomodoro aliases
 alias pomowork='sh ~/scripts/timer.sh 25 "Pomodoro" "25 minutes left!" "Take a break!"'
 alias pomobreak='sh ~/scripts/timer.sh 5 "Pomodoro short break" "5 minutes left!" "Get to work!"'
 alias pomolongbreak='sh ~/scripts/timer.sh 15 "Pomodoro long break" "15 minutes left!" "Get to work!"'
 
+alias latexmake='latexmk -pdf -pvc'
+
 # Global aliases
+# ==============
 alias -g Gp='| grep -i'
 
 # Suffix aliases
+# ==============
 alias -s tex=vim
 alias -s pdf=evince
 
