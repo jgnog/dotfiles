@@ -24,6 +24,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export EDITOR='vim'
 
+# Use the zmv renaming tool
+autoload -U zmv
+
 #=====================#
 #                     #
 #      Aliases        #
