@@ -45,7 +45,7 @@ alias pomobreak='sh ~/scripts/timer.sh 5 "Pomodoro short break" "5 minutes left!
 alias pomolongbreak='sh ~/scripts/timer.sh 15 "Pomodoro long break" "15 minutes left!" "Get to work!"'
 
 alias latexmake='latexmk -pdf -pvc'
-alias latexclean='latexmk -CA'
+alias latexclean='latexmk -C'
 
 # Global aliases
 # ==============
