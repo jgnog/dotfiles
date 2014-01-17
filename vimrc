@@ -132,3 +132,6 @@ set hidden
 " Treat longlines as different lines
 nnoremap j gj
 nnoremap k gk
+
+" Use double space to save the file
+nnoremap <space><space> :w<CR>
