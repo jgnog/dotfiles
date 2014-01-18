@@ -133,5 +133,8 @@ set hidden
 nnoremap j gj
 nnoremap k gk
 
+" Use space to toggle folding
+nnoremap <space> za
 " Use double space to save the file
 nnoremap <space><space> :w<CR>
+
