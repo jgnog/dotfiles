@@ -8,9 +8,8 @@ set expandtab
 " Display a colored column at column 80 to easily check line length
 set cc=80
 
-"""""""""""""""""""""""""""""
-" python-mode configuration "
-"""""""""""""""""""""""""""""
+" python-mode configuration
+" =========================
 
 " Disable :PymodeRun
 let g:pymode_run = 0
