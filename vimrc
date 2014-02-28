@@ -138,3 +138,5 @@ nnoremap <space> za
 " Use double space to save the file
 nnoremap <space><space> :w<CR>
 
+" Add /usr/share/vim to runtimepath because of lilypond files in there
+set runtimepath+=/usr/share/vim/
