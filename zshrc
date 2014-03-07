@@ -47,6 +47,8 @@ alias pomolongbreak='sh ~/scripts/timer.sh 15 "Pomodoro long break" "15 minutes 
 alias latexmake='latexmk -pdf -pvc'
 alias latexclean='latexmk -C'
 
+alias ipynb='ipython notebook --pylab=inline'
+
 # Global aliases
 # ==============
 alias -g Gp='| grep -i'
