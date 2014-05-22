@@ -38,13 +38,15 @@ autoload -U zmv
 alias subs='subliminal -l pt -l pt-br -l en --'
 alias rm='rm -I'
 alias vimconfig='cd ~/dotfiles && vim vimrc'
+obrasporouvir=/home/jgnog/media/music/Musica/Classical/obras-por-ouvir
+alias choosemusic='vim +$(shuf -i 1-$(cat $obrasporouvir | wc -l) -n 1) $obrasporouvir'
 
 # Pomodoro aliases
 alias pomowork='sh ~/scripts/timer.sh 25 "Pomodoro" "25 minutes left!" "Take a break!"'
 alias pomobreak='sh ~/scripts/timer.sh 5 "Pomodoro short break" "5 minutes left!" "Get to work!"'
 alias pomolongbreak='sh ~/scripts/timer.sh 15 "Pomodoro long break" "15 minutes left!" "Get to work!"'
 
-alias latexmake='latexmk -pdf -pvc'
+alias latexmake='latexmk -pdf -pvc -latexoption=-shell-escape'
 alias latexclean='latexmk -C'
 
 alias ipynb='ipython notebook --pylab=inline'
@@ -61,3 +63,4 @@ alias -s pdf=evince
 # 'Function' aliases
 snippets () { cat ~/.vim/bundle/vim-snippets/snippets/$1.snippets }
 cheat () {evince documents/cheatsheets/$1.pdf}
+addmusic () { echo $1 >> $obrasporouvir }

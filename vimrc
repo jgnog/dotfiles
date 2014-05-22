@@ -18,7 +18,7 @@ syntax on
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set history=250		" keep 250 lines of command line history
+set history=1000	" keep 250 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
@@ -140,3 +140,28 @@ nnoremap <space><space> :w<CR>
 
 " Add /usr/share/vim to runtimepath because of lilypond files in there
 set runtimepath+=/usr/share/vim/
+
+" Enable case-smart searching
+set ignorecase
+set smartcase
+
+" Change leader key
+let mapleader = "," 
+
+" Better mark navigation
+nnoremap ' `
+nnoremap ` '
+
+" Enable extended % matching
+runtime macros/matchit.vim
+
+" File/command comletion more useful
+set wildmenu
+set wildmode=list:longest
+
+" Swap files all in one place
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+" Stifle many interruptive prompts
+set shormess=atI
