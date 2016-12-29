@@ -102,8 +102,5 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 . /etc/bash_completion
 fi
 
-# Bashmarks
-source ~/.local/bin/bashmarks.sh
-
 # Change the prompt to use two lines and different colors
 export PS1="\e[1;35m\w\e[m    \e[1;33m\h\e[m\n\e[1;32m\u \$\e[m "
