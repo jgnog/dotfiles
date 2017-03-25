@@ -7,14 +7,6 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Configuração de pathogen
-" (instalação de plugins)
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
-syntax on
-
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -22,10 +14,6 @@ set history=1000	" keep 250 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
-
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
@@ -73,14 +61,6 @@ else
 
 endif " has("autocmd")
 
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
-
 " Line numbers on all files
 set number
 
@@ -95,12 +75,6 @@ set expandtab
 " No backup files
 set nobackup
 
-" Easier window switching
-noremap <c-h> <c-w>h
-noremap <c-j> <c-w>j
-noremap <c-k> <c-w>k
-noremap <c-l> <c-w>l
-
 " clear highlighting on double <esc> press
 nnoremap <esc><esc> :noh<return><esc>
 
@@ -111,21 +85,6 @@ set clipboard=unnamed
 " current buffer directory
 set tags=./tags,tags
 
-" Make delimitMate expand <CR> as example below
-"
-"
-"                      <CR><CR><Up>  |  You get
-"                    ============================
-"                           (|)      |    (
-"                                    |    |
-"                                    |    )
-let g:delimitMate_expand_cr=1
-
-" Set personal details for snipMate
-let g:snips_author="Gonçalo Nogueira"
-let g:snips_email="jgoncalonogueira@gmail.com"
-let g:snips_github="github.com/jgnog"
-
 " Allow switching buffers without saving a file
 set hidden
 
@@ -133,8 +92,6 @@ set hidden
 nnoremap j gj
 nnoremap k gk
 
-" Use space to toggle folding
-nnoremap <space> za
 " Use double space to save the file
 nnoremap <space><space> :w<CR>
 
@@ -147,13 +104,6 @@ set smartcase
 
 " Change leader key
 let mapleader = "," 
-
-" Better mark navigation
-nnoremap ' `
-nnoremap ` '
-
-" Enable extended % matching
-runtime macros/matchit.vim
 
 " File/command comletion more useful
 set wildmenu
