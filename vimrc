@@ -126,3 +126,6 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Stifle many interruptive prompts
 set shortmess=atI
+
+" Search recursively for files
+set path+=**
