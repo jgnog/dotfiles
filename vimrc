@@ -108,6 +108,7 @@ nnoremap <space><space> :w<CR>
 
 " Add /usr/share/vim to runtimepath because of lilypond files in there
 set runtimepath+=/usr/share/vim/
+set runtimepath+=/usr/bin/lilypond/current/vim
 
 " Enable case-smart searching
 set ignorecase
