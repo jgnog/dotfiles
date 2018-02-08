@@ -14,6 +14,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-commentary'
+Plugin 'benmills/vimux'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -90,11 +92,11 @@ set nobackup
 nnoremap <esc><esc> :noh<return><esc>
 
 " Clipboard is the "* register
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Look for tags file in current directory and in
 " current buffer directory
-set tags=./tags,tags
+set tags+=./tags,tags
 
 " Allow switching buffers without saving a file
 set hidden
@@ -108,16 +110,16 @@ nnoremap <space><space> :w<CR>
 
 " Add /usr/share/vim to runtimepath because of lilypond files in there
 set runtimepath+=/usr/share/vim/
-set runtimepath+=/usr/share/lilypond/2.18.2/vim
+set runtimepath+=/usr/share/lilypond/2.18.2/vim/
 
 " Enable case-smart searching
 set ignorecase
 set smartcase
 
 " Change leader key
-let mapleader = "," 
+let mapleader = ","
 
-" File/command comletion more useful
+" File/command completion more useful
 set wildmenu
 set wildmode=list:longest
 
@@ -130,3 +132,35 @@ set shortmess=atI
 
 " Search recursively for files
 set path+=**
+
+" Use the solarized colorscheme
+colorscheme solarized
+
+" Configurations for Vimux
+" Work with a REPL on another tmux pane
+
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+function! VimuxSlime()
+    call VimuxSendText(@v)
+    call VimuxSendKeys("Enter")
+endfunction
+
+
+" Save current selection in the v buffer and send that buffer to tmux
+vnoremap <LocalLeader>ss "vy :call VimuxSlime()<CR>
+" Save current line in the v buffer and send that buffer to tmux
+nnoremap <LocalLeader>ll "vyy :call VimuxSlime()<CR>
+
+" Binding to reload vim configuration file
+nnoremap <Leader>r :source $MYVIMRC<CR>
+
+""""""""""""""""
+" Git bindings "
+""""""""""""""""
+
+" See the git status
+nnoremap <Leader>gs :!git status<CR>
+" Commit everything that is staged
+nnoremap <Leader>gc :!git commit -a<CR>
