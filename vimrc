@@ -131,5 +131,3 @@ inoremap <Leader><Tab> <Tab>
 nnoremap <Tab> <Esc>
 vnoremap <Tab> <Esc>gV
 onoremap <Tab> <Esc>
-cnoremap <Tab> <C-C><Esc>
-cnoremap <Tab> <Esc>
