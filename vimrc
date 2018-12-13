@@ -131,3 +131,8 @@ inoremap <Leader><Tab> <Tab>
 nnoremap <Tab> <Esc>
 vnoremap <Tab> <Esc>gV
 onoremap <Tab> <Esc>
+
+" Solarized colorscheme
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+colorscheme solarized
