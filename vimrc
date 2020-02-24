@@ -8,16 +8,6 @@
 set nocompatible
 
 filetype off
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-commentary'
-Plugin 'benmills/vimux'
-Plugin 'altercation/vim-colors-solarized'
-
-call vundle#end()
 filetype plugin indent on
 
 " allow backspacing over everything in insert mode
@@ -130,37 +120,8 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " Stifle many interruptive prompts
 set shortmess=atI
 
-" Search recursively for files
-set path+=**
+" Solarized colorscheme
+colorscheme solarized8
 
-" Use the solarized colorscheme
-colorscheme solarized
-
-" Configurations for Vimux
-" Work with a REPL on another tmux pane
-
-" Prompt for a command to run
-map <Leader>vp :VimuxPromptCommand<CR>
-
-function! VimuxSlime()
-    call VimuxSendText(@v)
-    call VimuxSendKeys("Enter")
-endfunction
-
-
-" Save current selection in the v buffer and send that buffer to tmux
-vnoremap <LocalLeader>ss "vy :call VimuxSlime()<CR>
-" Save current line in the v buffer and send that buffer to tmux
-nnoremap <LocalLeader>ll "vyy :call VimuxSlime()<CR>
-
-" Binding to reload vim configuration file
-nnoremap <Leader>r :source $MYVIMRC<CR>
-
-""""""""""""""""
-" Git bindings "
-""""""""""""""""
-
-" See the git status
-nnoremap <Leader>gs :!git status<CR>
-" Commit everything that is staged
-nnoremap <Leader>gc :!git commit -a<CR>
+" Avoid escape
+imap jk <Esc>
