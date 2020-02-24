@@ -8,12 +8,6 @@
 set nocompatible
 
 filetype off
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-call vundle#end()
 filetype plugin indent on
 
 " allow backspacing over everything in insert mode
@@ -114,7 +108,7 @@ set smartcase
 " Change leader key
 let mapleader = "," 
 
-" File/command comletion more useful
+" File/command completion more useful
 set wildmenu
 set wildmode=list:longest
 
@@ -125,14 +119,8 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " Stifle many interruptive prompts
 set shortmess=atI
 
-" Avoid escape
-inoremap <Tab> <Esc>`^
-inoremap <Leader><Tab> <Tab>
-nnoremap <Tab> <Esc>
-vnoremap <Tab> <Esc>gV
-onoremap <Tab> <Esc>
-
 " Solarized colorscheme
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
+colorscheme solarized8
+
+" Avoid escape
+imap jk <Esc>
