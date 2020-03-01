@@ -120,8 +120,5 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " Stifle many interruptive prompts
 set shortmess=atI
 
-" Solarized colorscheme
-colorscheme solarized8
-
 " Avoid escape
 imap jk <Esc>
