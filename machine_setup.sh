@@ -42,9 +42,21 @@ sudo apt-get -y install htop xclip
 # Install latex
 sudo apt-get -y install texlive-latex-extra texlive-pictures
 
-#r
-#anaconda
-#gcloud
-#google drive (rclone)
-#dropbox (rclone)
-#chrome
+# Install rclone and launch the interacrive config
+sudo apt-get -y install rclone
+rclone config
+
+# Install R and RStudio
+sudo apt-get -y install r-base gdebi-core
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb
+sudo gdebi rstudio-1.2.5033-amd64.deb
+rm rstudio-1.2.5033-amd64.deb
+
+# Install Anaconda
+sudo apt-get -y install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+bash Anaconda3-2019.10-Linux-x86_64.sh
+rm Anaconda3-2019.10-Linux-x86_64.sh
+
+# Install chromium
+sudo apt-get install chromium-browser
