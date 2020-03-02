@@ -69,6 +69,3 @@ gcloud init
 
 # Install chromium
 sudo apt-get install chromium-browser
-
-# Install VirtualBox Guest Additions in case this is a VM
-sudo apt-get -y install virtualbox-guest-additions-iso
