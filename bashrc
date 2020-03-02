@@ -1,6 +1,11 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+
+# Source the bash-sensible script provided by mrzool (github.com/mrzool/bash-sensible)
+if [ -f ~/bash-sensible/sensible.bash ]; then
+   source ~/bash-sensible/sensible.bash
+fi
  
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
