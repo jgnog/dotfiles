@@ -3,6 +3,11 @@
 # Make sure we are in the homedir
 cd ~
 
+# Remove vim-tiny and install full Vim
+sudo apt remove --assume-yes vim-tiny
+sudo apt update
+sudo apt install --assume-yes vim
+
 # Install git
 sudo apt-get -y install git
 
