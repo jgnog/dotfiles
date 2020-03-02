@@ -37,7 +37,7 @@ cd ~
 sudo apt-get -y install tmux
 
 # Install some utilities
-sudo apt-get -y install htop xclip
+sudo apt-get -y install htop xclip w3m ag ncdu
 
 # Install latex
 sudo apt-get -y install texlive-latex-extra texlive-pictures
@@ -58,5 +58,14 @@ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 bash Anaconda3-2019.10-Linux-x86_64.sh
 rm Anaconda3-2019.10-Linux-x86_64.sh
 
+# Install Google Cloud SDK and run the initial configuration
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+sudo apt-get update && sudo apt-get install google-cloud-sdk
+gcloud init
+
 # Install chromium
 sudo apt-get install chromium-browser
+
+# Install VirtualBox Guest Additions in case this is a VM
+sudo apt-get -y install virtualbox-guest-additions-iso
