@@ -42,7 +42,7 @@ cd ~
 sudo apt-get -y install tmux
 
 # Install some utilities
-sudo apt-get -y install htop xclip w3m silversearcher-ag ncdu python3-pip
+sudo apt-get -y install htop xclip w3m silversearcher-ag ncdu python3-pip python3-venv
 
 # Install latex
 sudo apt-get -y install texlive-latex-extra texlive-pictures
