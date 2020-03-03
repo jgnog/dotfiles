@@ -6,7 +6,7 @@ cd ~
 # Remove vim-tiny and install full Vim
 sudo apt remove --assume-yes vim-tiny
 sudo apt update && sudo apt upgrade
-sudo apt install --assume-yes vim-gtk git curl make tmux htop xclip w3m silversearcher-ag ncdu python3-pip python3-venv texlive-latex-extra texlive-pictures rclone chromium-browser
+sudo apt install --assume-yes vim-gtk git curl make tmux htop xclip w3m silversearcher-ag ncdu python3-pip python3-venv texlive-latex-extra texlive-pictures texlive-lang-portuguese rclone chromium-browser
 
 # Generate RSA ssh key pair,add it to ssh-agent and to GitHub
 function git_upload_ssh_key () {
