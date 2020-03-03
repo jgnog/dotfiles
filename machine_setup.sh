@@ -28,6 +28,9 @@ git_upload_ssh_key
 
 # Clone dotfiles repo and install dotfiles
 git clone git@github.com:jgnog/dotfiles.git ~/dotfiles
+# Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 # Install dotfiles
 cd ~/dotfiles
