@@ -5,11 +5,8 @@ cd ~
 
 # Remove vim-tiny and install full Vim
 sudo apt remove --assume-yes vim-tiny
-sudo apt update
-sudo apt install --assume-yes vim
-
-# Install git
-sudo apt-get -y install git
+sudo apt update && sudo apt upgrade
+sudo apt install --assume-yes vim-gtk git curl make tmux htop xclip w3m silversearcher-ag ncdu python3-pip python3-venv texlive-latex-extra texlive-pictures rclone chromium-browser
 
 # Generate RSA ssh key pair,add it to ssh-agent and to GitHub
 function git_upload_ssh_key () {
@@ -32,30 +29,13 @@ git_upload_ssh_key
 # Clone dotfiles repo and install dotfiles
 git clone git@github.com:jgnog/dotfiles.git ~/dotfiles
 
-# Install make and run it on dotfiles
-sudo apt-get -y install make
+# Install dotfiles
 cd ~/dotfiles
 make
 cd ~
 
-# Install tmux
-sudo apt-get -y install tmux
-
-# Install some utilities
-sudo apt-get -y install htop xclip w3m silversearcher-ag ncdu python3-pip python3-venv
-
-# Install latex
-sudo apt-get -y install texlive-latex-extra texlive-pictures
-
-# Install rclone and launch the interacrive config
-sudo apt-get -y install rclone
+# Initiate rclone config
 rclone config
-
-# Install R and RStudio
-sudo apt-get -y install r-base gdebi-core
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb
-sudo gdebi rstudio-1.2.5033-amd64.deb
-rm rstudio-1.2.5033-amd64.deb
 
 # Install Anaconda
 sudo apt-get -y install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
@@ -66,6 +46,3 @@ rm Anaconda3-2019.10-Linux-x86_64.sh
 # Install Google Cloud SDK and run the initial configuration
 sudo snap install --classic google-cloud-sdk
 gcloud init
-
-# Install chromium
-sudo apt-get install chromium-browser
