@@ -82,11 +82,11 @@ set nobackup
 nnoremap <esc><esc> :noh<return><esc>
 
 " Clipboard is the "* register
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Look for tags file in current directory and in
 " current buffer directory
-set tags=./tags,tags
+set tags+=./tags,tags
 
 " Allow switching buffers without saving a file
 set hidden
@@ -100,13 +100,14 @@ nnoremap <space><space> :w<CR>
 
 " Add /usr/share/vim to runtimepath because of lilypond files in there
 set runtimepath+=/usr/share/vim/
+set runtimepath+=/usr/share/lilypond/2.18.2/vim/
 
 " Enable case-smart searching
 set ignorecase
 set smartcase
 
 " Change leader key
-let mapleader = "," 
+let mapleader = ","
 
 " File/command completion more useful
 set wildmenu
