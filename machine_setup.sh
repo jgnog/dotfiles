@@ -31,6 +31,9 @@ git clone git@github.com:jgnog/dotfiles.git ~/dotfiles
 # Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+# Install Tmux Plugin Manager
+# Use prefix + I to install the plugins once you are in a tmux session
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install dotfiles
 cd ~/dotfiles
