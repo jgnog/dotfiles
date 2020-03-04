@@ -145,3 +145,6 @@ set shortmess=atI
 
 " Avoid escape
 imap jk <Esc>
+
+" Don't wrap long lines
+set nowrap
