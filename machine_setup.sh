@@ -34,6 +34,8 @@ vim +PluginInstall +qall
 # Install Tmux Plugin Manager
 # Use prefix + I to install the plugins once you are in a tmux session
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# Install base16-shell
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
 # Install dotfiles
 cd ~/dotfiles
