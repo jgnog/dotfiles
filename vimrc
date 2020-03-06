@@ -16,6 +16,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'micha/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -91,7 +92,8 @@ set number
 
 " Better colors for a dark background
 set background=dark
-colorscheme solarized
+let base16colorspace=256
+colorscheme base16-default-dark
 
 " Tabs are 4 spaces
 set shiftwidth=4
