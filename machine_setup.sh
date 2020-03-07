@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Enable bash strict mode
+set -euo pipefail
+IFS=$'\n\t'
 
 # Make sure we are in the homedir
 cd ~
