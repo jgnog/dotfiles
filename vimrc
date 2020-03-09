@@ -106,9 +106,6 @@ set nobackup
 " clear highlighting on double <esc> press
 nnoremap <esc><esc> :noh<return><esc>
 
-" Clipboard is the "* register
-set clipboard=unnamedplus
-
 " Look for tags file in current directory and in
 " current buffer directory
 set tags+=./tags,tags
