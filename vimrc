@@ -120,10 +120,6 @@ nnoremap k gk
 " Use double space to save the file
 nnoremap <space><space> :w<CR>
 
-" Add /usr/share/vim to runtimepath because of lilypond files in there
-set runtimepath+=/usr/share/vim/
-set runtimepath+=/usr/share/lilypond/2.18.2/vim/
-
 " Enable case-smart searching
 set ignorecase
 set smartcase
