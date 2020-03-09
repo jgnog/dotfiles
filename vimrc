@@ -143,3 +143,6 @@ imap jk <Esc>
 
 " Don't wrap long lines
 set nowrap
+
+" Set path so that finding files works recursively
+set path+=**
