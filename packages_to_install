@@ -16,4 +16,4 @@ texlive-lang-portuguese
 texlive-fonts-extra
 rclone
 chromium-browser
-ctags
+exuberant-ctags
