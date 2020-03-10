@@ -14,3 +14,4 @@
     ca = commit -a
     co = checkout
     br = branch
+    logg = log --graph --oneline
