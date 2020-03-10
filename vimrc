@@ -127,10 +127,6 @@ set smartcase
 " Change leader key
 let mapleader = ","
 
-" File/command completion more useful
-set wildmenu
-set wildmode=list:longest
-
 " Swap files all in one place
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -146,3 +142,10 @@ set nowrap
 
 " Set path so that finding files works recursively
 set path+=**
+"
+" File/command completion more useful
+set wildmenu
+
+" netrw settings
+let g:netrw_banner=0 " Disable banner
+let g:netrw_liststyle=3 " Tree style view
