@@ -152,3 +152,11 @@ let g:netrw_liststyle=3 " Tree style view
 
 " Copy whole file
 nnoremap <leader>c ggVG"+y
+
+function ExploreWinEditWin()
+    40vsplit " Create a vertical split 20 columns wide
+    Explore
+    let g:netrw_chgwin=2 " Set the 2nd to be the editing window when you open a file in netrw
+endfunction
+
+command! StandardWinLayout call ExploreWinEditWin()
