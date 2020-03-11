@@ -149,3 +149,6 @@ set wildmenu
 " netrw settings
 let g:netrw_banner=0 " Disable banner
 let g:netrw_liststyle=3 " Tree style view
+
+" Copy whole file
+nnoremap <leader>c ggVG"+y
