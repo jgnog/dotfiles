@@ -15,3 +15,4 @@
     co = checkout
     br = branch
     logg = log --graph --oneline
+    unstage = reset HEAD
