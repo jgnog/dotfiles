@@ -16,3 +16,7 @@
     br = branch
     logg = log --graph --oneline
     unstage = reset HEAD
+[pull]
+	rebase = false
+[diff]
+	tool = vimdiff
