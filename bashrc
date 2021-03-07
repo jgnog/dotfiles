@@ -111,6 +111,9 @@ shopt -s cdable_vars
 ########################
 # End of bash-sensible #
 ########################
+
+# Set the EDITOR environment variable
+export EDITOR="/usr/bin/vim"
  
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -171,3 +174,14 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# Note-taking system
+export NOTESDIR=$HOME"/my-notes/notes/"
+
+# Function to create a new note
+newnote () {
+    # Get the current date in the format yyyymmddhhmm and convert it to hexadecimal
+    # and append the md extension. Finally, open it using the environment's editor
+    cd $NOTESDIR
+    $EDITOR $(printf '%x\n' $(date +"%Y%m%d%H%M")).md
+}
