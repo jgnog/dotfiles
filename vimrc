@@ -236,3 +236,10 @@ command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-ar
 " Shortcut to get the current filename into the unnamed register
 " You can then paste it using p in normal mode
 nmap <leader>f :let @" = expand("%")<CR>
+
+function NewNote ()
+    execute 'edit '.printf('%x', str2nr(strftime('%Y%m%d%H%M'))).".md"
+    execute 'norm A#'
+    put=strftime('%Y-%m-%d %H:%M')
+endfunction
+command NewNote call NewNote()
