@@ -232,3 +232,7 @@ function! s:Bclose(bang, buffer)
   execute wcurrent.'wincmd w'
 endfunction
 command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-args>)
+
+" Shortcut to get the current filename into the unnamed register
+" You can then paste it using p in normal mode
+nmap <leader>f :let @" = expand("%")<CR>
