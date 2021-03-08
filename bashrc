@@ -176,7 +176,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # Note-taking system
-export NOTESDIR=$HOME"/my-notes/notes/"
+export NOTESDIR=$HOME"/my-notes/"
 
 # Function to create a new note
 newnote () {
