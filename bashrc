@@ -182,6 +182,10 @@ export NOTESDIR=$HOME"/my-notes/notes/"
 newnote () {
     # Get the current date in the format yyyymmddhhmm and convert it to hexadecimal
     # and append the md extension. Finally, open it using the environment's editor
+    new_filename=$(printf '%x\n' $(date +"%Y%m%d%H%M")).md
     cd $NOTESDIR
-    $EDITOR $(printf '%x\n' $(date +"%Y%m%d%H%M")).md
+    touch $new_filename
+    echo "#" >> $new_filename
+    date +"%Y-%m-%d %H:%M" >> $new_filename
+    $EDITOR $new_filename
 }
