@@ -243,3 +243,5 @@ function NewNote ()
     put=strftime('%Y-%m-%d %H:%M')
 endfunction
 command NewNote call NewNote()
+
+nmap <leader>s :%sort<CR>
