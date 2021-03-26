@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/cygdrive/c/Users/goncalo.nogueira/bi-salesfoce-ops/main_process/sql_scripts/aggregation'
+let g:netrw_dirhist_0='/cygdrive/c/Users/goncalo.nogueira/bi-salesfoce-ops'
+let g:netrw_dirhist_9='/cygdrive/c/Users/goncalo.nogueira/bi-salesfoce-ops/main_process/transformations'
+let g:netrw_dirhist_8='/cygdrive/c/Users/goncalo.nogueira/bi-salesfoce-ops/main_process/sql_scripts/transformation'
+let g:netrw_dirhist_7='/cygdrive/c/Users/goncalo.nogueira/bi-salesfoce-ops/main_process/sql_scripts'
+let g:netrw_dirhist_6='/cygdrive/c/Users/goncalo.nogueira/bi-salesfoce-ops/main_process'
+let g:netrw_dirhist_5='/cygdrive/c/Users/goncalo.nogueira/bi-salesfoce-ops'
+let g:netrw_dirhist_4='/home/goncalo.nogueira/.ssh'
+let g:netrw_dirhist_3='/cygdrive/c/Users/goncalo.nogueira.FARFETCH/Downloads/app/app/src/static/js'
+let g:netrw_dirhist_2='/cygdrive/c/Users/goncalo.nogueira.FARFETCH/Downloads/app/app/src/static'
