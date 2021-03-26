@@ -189,3 +189,7 @@ newnote () {
     date +"%Y-%m-%d %H:%M" >> $new_filename
     $EDITOR $new_filename
 }
+
+# Use git completion script if it exists
+# $_ means last argument of the previous command
+test -f ~/.git-completion.bash && . $_

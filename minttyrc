@@ -18,3 +18,4 @@ Cyan=134,193,185
 BoldCyan=134,193,185
 White=216,216,216
 BoldWhite=216,216,216
+RightClickAction=paste
