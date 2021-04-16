@@ -245,3 +245,6 @@ endfunction
 command NewNote call NewNote()
 
 nmap <leader>s :%sort<CR>
+
+" Add shortcut to toggle paste option
+inoremap <F12> :set paste!<CR>
