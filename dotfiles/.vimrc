@@ -108,7 +108,7 @@ nnoremap <esc><esc> :noh<return><esc>
 
 " Look for tags file in current directory and in
 " current buffer directory
-set tags+=./tags,tags
+set tags+=tags;/
 
 " Allow switching buffers without saving a file
 set hidden
