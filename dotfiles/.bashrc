@@ -169,12 +169,6 @@ fi
 PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux
 export PATH
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
 # Note-taking system
 export NOTESDIR=$HOME"/my-notes/"
 
