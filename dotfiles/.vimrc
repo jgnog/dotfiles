@@ -17,6 +17,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'micha/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
+Plugin 'habamax/vim-sendtoterm'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
