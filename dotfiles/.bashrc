@@ -184,10 +184,6 @@ newnote () {
     $EDITOR $new_filename
 }
 
-# Use git completion script if it exists
-# $_ means last argument of the previous command
-test -f ~/.git-completion.bash && . $_
-
 ########################
 # oh-my-bash config
 #######################
@@ -243,8 +239,6 @@ OSH_THEME="font"
 # Add wisely, as too many completions slow down shell startup.
 completions=(
   git
-  composer
-  ssh
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -261,7 +255,6 @@ aliases=(
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  bashmarks
 )
 
 source $OSH/oh-my-bash.sh
