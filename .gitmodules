@@ -1,3 +1,6 @@
 [submodule "dotfiles/.oh-my-bash"]
 	path = dotfiles/.oh-my-bash
 	url = https://github.com/ohmybash/oh-my-bash.git
+[submodule "dotfiles/.vim/bundle/Vundle.vim"]
+	path = dotfiles/.vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
