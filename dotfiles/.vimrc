@@ -18,6 +18,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'micha/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 Plugin 'habamax/vim-sendtoterm'
+Plugin 'ledger/vim-ledger'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,6 +53,7 @@ endif
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
+  set term=xterm-256color
 endif
 
 " Only do this part when compiled with support for autocommands.
