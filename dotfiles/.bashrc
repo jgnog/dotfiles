@@ -166,7 +166,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 . /etc/bash_completion
 fi
 
-PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux
+PATH=$PATH:~/.local/bin
 export PATH
 
 # Note-taking system
@@ -183,6 +183,8 @@ newnote () {
     date +"%Y-%m-%d %H:%M" >> $new_filename
     $EDITOR $new_filename
 }
+
+export LEDGER_FILE=~/personal-finances/ribnog.ledger
 
 ########################
 # oh-my-bash config
