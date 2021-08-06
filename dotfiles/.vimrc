@@ -262,3 +262,15 @@ if executable(s:clip)
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
     augroup END
 endif
+
+" Bring search results to midscreennnoremap n nzz
+nnoremap n nzz
+nnoremap N Nzz
+
+" Better keys for start and end of line
+nnoremap H ^
+nnoremap L $
+
+" Backspace to switch to alternative buffer
+nnoremap <bs> <C-^>`"zz
+
