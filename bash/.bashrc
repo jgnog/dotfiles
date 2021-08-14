@@ -191,7 +191,7 @@ export LEDGER_FILE=~/personal-finances/ribnog.ledger
 #######################
 
 # Path to your oh-my-bash installation.
-export OSH=/home/jgnog/dotfiles/oh-my-bash
+export OSH=~/dotfiles/do-not-stow/oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
@@ -233,7 +233,7 @@ OSH_THEME="font"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $OSH/custom?
-# OSH_CUSTOM=/path/to/new-custom-folder
+OSH_CUSTOM=~/dotfiles/do-not-stow/osh-custom
 
 # Which completions would you like to load? (completions can be found in ~/.oh-my-bash/completions/*)
 # Custom completions may be added to ~/.oh-my-bash/custom/completions/
