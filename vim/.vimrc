@@ -274,3 +274,5 @@ nnoremap L $
 " Backspace to switch to alternative buffer
 nnoremap <bs> <C-^>`"zz
 
+" Normal command to close the current buffer
+nnoremap <leader>q :Bclose<CR>
