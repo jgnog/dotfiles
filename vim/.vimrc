@@ -276,3 +276,6 @@ nnoremap <bs> <C-^>`"zz
 
 " Normal command to close the current buffer
 nnoremap <leader>q :Bclose<CR>
+
+" Enable digraph option so that digraphs can be typed with {char1} <BS> {char2}
+set digraph
