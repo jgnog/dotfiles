@@ -279,3 +279,11 @@ set -o vi
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
+# Add local Python binaries to PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+# Add fzf keybindings
+source /usr/share/doc/fzf/examples/key-bindings.bash
+# Add fzf auto-completion
+source /usr/share/doc/fzf/examples/completion.bash

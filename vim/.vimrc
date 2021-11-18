@@ -19,6 +19,8 @@ Plugin 'micha/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 Plugin 'habamax/vim-sendtoterm'
 Plugin 'ledger/vim-ledger'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'junegunn/fzf'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -151,17 +153,13 @@ set wildmenu
 " netrw settings
 let g:netrw_banner=0 " Disable banner
 let g:netrw_liststyle=3 " Tree style view
+let g:netrw_preview=1 " Make vertical splitting the default for previewing files
+let g:netrw_winsize=20
+
+nnoremap <leader>e :Lexplore<CR>
 
 " Copy whole file
 nnoremap <leader>c ggVG"+y
-
-function ExploreWinEditWin()
-    40vsplit " Create a vertical split 20 columns wide
-    Explore
-    let g:netrw_chgwin=2 " Set the 2nd to be the editing window when you open a file in netrw
-endfunction
-
-command! StandardWinLayout call ExploreWinEditWin()
 
 " Delete buffer while keeping window layout (don't close buffer's windows).
 " Version 2008-11-18 from http://vim.wikia.com/wiki/VimTip165
@@ -277,5 +275,22 @@ nnoremap <bs> <C-^>`"zz
 " Normal command to close the current buffer
 nnoremap <leader>q :Bclose<CR>
 
-" Enable digraph option so that digraphs can be typed with {char1} <BS> {char2}
-set digraph
+" Delete hidden buffers, skipping modified ones
+" Taken from https://stackoverflow.com/a/30101152
+function! DeleteHiddenBuffers()
+  let tpbl=[]
+  let closed = 0
+  call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
+  for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
+        if getbufvar(buf, '&mod') == 0
+      silent execute 'bwipeout' buf
+      let closed += 1
+    endif
+  endfor
+  echo "Closed ".closed." hidden buffers"
+endfunction
+
+command DeleteHiddenBuffers call DeleteHiddenBuffers()
+
+" Shortcut to open fzf
+nnoremap <leader>o :FZF<CR>
