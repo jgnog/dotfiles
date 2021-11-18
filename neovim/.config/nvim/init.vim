@@ -3,7 +3,6 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'micha/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'habamax/vim-sendtoterm'
 Plug 'ledger/vim-ledger'
