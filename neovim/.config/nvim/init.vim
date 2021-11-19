@@ -8,7 +8,12 @@ Plug 'habamax/vim-sendtoterm'
 Plug 'ledger/vim-ledger'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
+
+" LSP configuration
+
+lua require'lspconfig'.pyright.setup{}
 
 
 " Some basic configuration
@@ -57,6 +62,15 @@ function NewNote ()
     put=strftime('%Y-%m-%d %H:%M')
 endfunction
 command NewNote call NewNote()
+
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
 
 
 " Complex mappings
