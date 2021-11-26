@@ -1,0 +1,3 @@
+- [ ] Read the Vim man pages for tabs and optimize the current config
+- [ ] Include script to install neovim from source
+- [ ] Include script to install mononoki Nerd font

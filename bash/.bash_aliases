@@ -8,3 +8,4 @@ alias .5='cd ../../../../..'
 alias mkdir='mkdir -pv'
 alias ll='ls -l'
 alias la='ls -a'
+alias mux=tmuxinator

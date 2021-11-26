@@ -113,7 +113,7 @@ shopt -s cdable_vars
 ########################
 
 # Set the EDITOR environment variable
-export EDITOR="/usr/bin/vim"
+export EDITOR="/usr/local/bin/nvim"
  
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
