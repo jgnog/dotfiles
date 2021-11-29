@@ -244,10 +244,6 @@ nmap <leader>f :let @" = expand("%")<CR>
 " Sort the file
 nmap <leader>s :%sort<CR>
 
-" Bring search results to midscreen
-nnoremap n nzz
-nnoremap N Nzz
-
 " Better keys for start and end of line
 nnoremap H ^
 nnoremap L $
