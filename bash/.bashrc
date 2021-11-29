@@ -171,6 +171,12 @@ newnote () {
 
 export LEDGER_FILE=~/personal-finances/ribnog.ledger
 
+# This function calls cheat.sh with the name of a command to get TLDR for that
+# command
+cheat () {
+    curl cheat.sh/$1
+}
+
 ########################
 # oh-my-bash config
 #######################
