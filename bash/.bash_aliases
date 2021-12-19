@@ -9,3 +9,6 @@ alias mkdir='mkdir -pv'
 alias ll='ls -l'
 alias la='ls -a'
 alias mux=tmuxinator
+alias vim=nvim
+alias vi=nvim
+alias tmuxatt='tmux -2 attach'

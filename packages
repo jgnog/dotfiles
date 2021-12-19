@@ -16,3 +16,9 @@ lxappearance
 compton
 fontconfig
 i3
+bpython
+pandoc
+jq
+csvkit
+rsync
+dateutils

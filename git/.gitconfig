@@ -5,7 +5,7 @@
 	email = jgoncalonogueira@gmail.com
 
 [core]
-    editor = vim
+    editor = nvim
     autocrlf = input
 
 [alias]
@@ -19,5 +19,13 @@
     unstage = reset HEAD
 [pull]
 	rebase = false
+[merge]
+  tool = vimdiff
+[mergetool]
+  prompt = true
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[difftool]
+  prompt = false
 [diff]
-	tool = vimdiff
+  tool = vimdiff
