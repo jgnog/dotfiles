@@ -21,3 +21,4 @@ jq
 csvkit
 rsync
 dateutils
+zsh
