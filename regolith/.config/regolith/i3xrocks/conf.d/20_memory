@@ -1,0 +1,6 @@
+# memory
+#
+# Show memory usage
+[memory]
+command=../scripts/memory
+interval=5

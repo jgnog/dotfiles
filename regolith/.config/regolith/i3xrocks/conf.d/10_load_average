@@ -1,0 +1,5 @@
+# CPU load average
+
+[cpu_load_average]
+command=../scripts/load_average
+interval=10
