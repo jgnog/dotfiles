@@ -1,11 +1,27 @@
-install_vim_plugins: install vim-plug_installed.tmp
-	vim +PluginInstall +qall
+SHELL := /bin/bash
+.ONESHELL:
+.SHELLFLAGS := -eu -o pipefail -c
 
-vim-plug_installed.tmp:
-	sh install_vim_plug.sh	
+.PHONY: install_vim_plugins install uninstall
 
-install:
-	ls -d */ | grep -v do-not-stow | xargs stow --no-folding 
+install_nvim_plugins: install nvim/.local/share/nvim/site/autoload/plug.vim
+	nvim +PluginInstall +qall
+
+nvim/.local/share/nvim/site/autoload/plug.vim:
+	curl -fLo nvim/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+		   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+install: uninstall # Always uninstall before installing
+	ls -d */ | grep -v bin | xargs stow --no-folding 
 
 uninstall:
-	ls -d */ | grep -v do-not-stow | xargs stow -D --no-folding 
+	ls -d */ | grep -v bin | xargs stow -D --no-folding 
+
+add-repositories:
+	sudo add-apt-repository ppa:regolith-linux/release
+
+install-packages: add-repositories
+	cat packages | xargs sudo apt install --yes
+
+install-snaps:
+	cat snaps | xargs sudo snap install --classic
