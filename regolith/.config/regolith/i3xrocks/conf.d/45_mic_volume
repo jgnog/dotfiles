@@ -1,0 +1,4 @@
+# Mic volume indicator
+#
+[mic_volume]
+interval=5
