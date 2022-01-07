@@ -34,9 +34,9 @@ newnote () {
 }
 
 # Add fzf keybindings
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+source $HOME/.config/zsh/fzf-key-bindings.zsh
 # Add fzf auto-completion
-source /usr/share/doc/fzf/examples/completion.zsh
+source $HOME/.config/zsh/fzf-completion.zsh
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
