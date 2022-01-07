@@ -20,6 +20,9 @@ uninstall:
 add-repositories:
 	sudo add-apt-repository ppa:regolith-linux/release
 
+install-python-packages: install-packages
+	pip install -r python-packages
+
 install-packages: add-repositories
 	cat packages | xargs sudo apt install --yes
 
