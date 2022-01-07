@@ -10,7 +10,7 @@ export SAVEHIST=10000                   # Maximum events in history file
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-PATH=$PATH:~/.local/bin
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH
 
 # Note-taking system
@@ -22,5 +22,7 @@ export LEDGER_FILE=~/personal-finances/ribnog.ledger
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
-# Add local Python binaries to PATH
-export PATH="$HOME/.local/bin:$PATH"
+PRIVATE_ENV_FILE="$HOME/.config/zsh/private_zshenv"
+if [ -f $PRIVATE_ENV_FILE ]; then
+    source "$HOME/.config/zsh/private_zshenv"
+fi
