@@ -43,6 +43,7 @@ set splitbelow              " Open new splits below the current window
 set splitright              " Open new splits right to the current window
 set lazyredraw              " Don't redraw while executing macros
 set ffs=unix,dos,mac        " Use unix line endings
+set exrc                    " Read a local init.vim when starting nvim
 let mapleader = ","         " Change leader key
 
 " Plugin specific configurations
