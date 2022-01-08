@@ -30,3 +30,12 @@ zathura
 tree
 python3-venv
 python3-pip
+texlive
+texlive-fonts-recommended
+texlive-fonts-extra
+texlive-lang-english
+texlive-lang-portuguese
+texlive-latex-extra
+texlive-latex-recommended
+texlive-pictures
+texlive-science
