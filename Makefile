@@ -4,7 +4,7 @@ SHELL := /bin/bash
 
 .PHONY: install_vim_plugins install uninstall
 
-install_nvim_plugins: install nvim/.local/share/nvim/site/autoload/plug.vim
+install_nvim_plugins: nvim/.local/share/nvim/site/autoload/plug.vim install-snaps
 	nvim +PluginInstall +qall
 
 nvim/.local/share/nvim/site/autoload/plug.vim:
@@ -27,4 +27,4 @@ install-packages: add-repositories
 	cat packages | xargs sudo apt install --yes
 
 install-snaps:
-	cat snaps | xargs sudo snap install --classic
+	bin/install_snaps snaps
