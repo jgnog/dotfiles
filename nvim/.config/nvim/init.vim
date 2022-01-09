@@ -240,7 +240,7 @@ nnoremap <leader>o :FZF<CR>
 
 " Shortcut to get the current filename into the unnamed register
 " You can then paste it using p in normal mode
-nmap <leader>f :let @" = expand("%")<CR>
+nmap <leader>f :let @+ = expand("%")<CR>
 
 " Sort the file
 nmap <leader>s :%sort<CR>
