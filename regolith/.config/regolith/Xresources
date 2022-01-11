@@ -6,11 +6,11 @@ i3-wm.bar.font:	pango:mononoki Nerd Font 13, Material Design Icons 13
 i3-wm.font:	pango:mononoki Nerd Font 13
 i3xrocks.value.font:	mononoki Nerd Font 13
 rofi.font:	mononoki Nerd Font 16
-i3-wm.workspace.01.name:	1:<span font_desc='mononoki Nerd Font 13'>1:  </span>
-i3-wm.workspace.02.name:	2:<span font_desc='mononoki Nerd Font 13'>2:  </span>
+i3-wm.workspace.01.name:	1:<span font_desc='mononoki Nerd Font 13'>1: 爵</span>
+i3-wm.workspace.02.name:	2:<span font_desc='mononoki Nerd Font 13'>2:  </span>
 i3-wm.workspace.03.name:	3:<span font_desc='mononoki Nerd Font 13'>3:  </span>
 i3-wm.workspace.04.name:	4:<span font_desc='mononoki Nerd Font 13'>4:  </span>
-i3-wm.workspace.05.name:	5:<span font_desc='mononoki Nerd Font 13'>5:  </span>
+i3-wm.workspace.05.name:	5:<span font_desc='mononoki Nerd Font 13'>5: ﱘ </span>
 i3-wm.workspace.06.name:	6:<span font_desc='mononoki Nerd Font 13'>6: 6 </span>
 i3-wm.workspace.07.name:	7:<span font_desc='mononoki Nerd Font 13'>7: 7 </span>
 i3-wm.workspace.08.name:	8:<span font_desc='mononoki Nerd Font 13'>8: 8 </span>
