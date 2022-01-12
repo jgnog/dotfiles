@@ -6,25 +6,25 @@ i3-wm.bar.font:	pango:mononoki Nerd Font 13, Material Design Icons 13
 i3-wm.font:	pango:mononoki Nerd Font 13
 i3xrocks.value.font:	mononoki Nerd Font 13
 rofi.font:	mononoki Nerd Font 16
-i3-wm.workspace.01.name:	1:<span font_desc='mononoki Nerd Font 13'>1: 爵</span>
+i3-wm.workspace.01.name:	1:<span font_desc='mononoki Nerd Font 13'>1: 爵 </span>
 i3-wm.workspace.02.name:	2:<span font_desc='mononoki Nerd Font 13'>2:  </span>
 i3-wm.workspace.03.name:	3:<span font_desc='mononoki Nerd Font 13'>3:  </span>
 i3-wm.workspace.04.name:	4:<span font_desc='mononoki Nerd Font 13'>4:  </span>
 i3-wm.workspace.05.name:	5:<span font_desc='mononoki Nerd Font 13'>5: ﱘ </span>
-i3-wm.workspace.06.name:	6:<span font_desc='mononoki Nerd Font 13'>6: 6 </span>
-i3-wm.workspace.07.name:	7:<span font_desc='mononoki Nerd Font 13'>7: 7 </span>
-i3-wm.workspace.08.name:	8:<span font_desc='mononoki Nerd Font 13'>8: 8 </span>
-i3-wm.workspace.09.name:	9:<span font_desc='mononoki Nerd Font 13'>9: 9 </span>
-i3-wm.workspace.10.name:	10:<span font_desc='mononoki Nerd Font 13'>10: 10 </span>
-i3-wm.workspace.11.name:	11:<span font_desc='mononoki Nerd Font 13'>11: 11 </span>
-i3-wm.workspace.12.name:	12:<span font_desc='mononoki Nerd Font 13'>12: 12 </span>
-i3-wm.workspace.13.name:	13:<span font_desc='mononoki Nerd Font 13'>13: 13 </span>
-i3-wm.workspace.14.name:	14:<span font_desc='mononoki Nerd Font 13'>14: 14 </span>
-i3-wm.workspace.15.name:	15:<span font_desc='mononoki Nerd Font 13'>15: 15 </span>
-i3-wm.workspace.16.name:	16:<span font_desc='mononoki Nerd Font 13'>16: 16 </span>
-i3-wm.workspace.17.name:	17:<span font_desc='mononoki Nerd Font 13'>17: 17 </span>
-i3-wm.workspace.18.name:	18:<span font_desc='mononoki Nerd Font 13'>18: 18 </span>
-i3-wm.workspace.19.name:	19:<span font_desc='mononoki Nerd Font 13'>19: 19 </span>
+i3-wm.workspace.06.name:	6:<span font_desc='mononoki Nerd Font 13'> 6 </span>
+i3-wm.workspace.07.name:	7:<span font_desc='mononoki Nerd Font 13'> 7 </span>
+i3-wm.workspace.08.name:	8:<span font_desc='mononoki Nerd Font 13'> 8 </span>
+i3-wm.workspace.09.name:	9:<span font_desc='mononoki Nerd Font 13'> 9 </span>
+i3-wm.workspace.10.name:	10:<span font_desc='mononoki Nerd Font 13'> 10 </span>
+i3-wm.workspace.11.name:	11:<span font_desc='mononoki Nerd Font 13'> 11 </span>
+i3-wm.workspace.12.name:	12:<span font_desc='mononoki Nerd Font 13'> 12 </span>
+i3-wm.workspace.13.name:	13:<span font_desc='mononoki Nerd Font 13'> 13 </span>
+i3-wm.workspace.14.name:	14:<span font_desc='mononoki Nerd Font 13'> 14 </span>
+i3-wm.workspace.15.name:	15:<span font_desc='mononoki Nerd Font 13'> 15 </span>
+i3-wm.workspace.16.name:	16:<span font_desc='mononoki Nerd Font 13'> 16 </span>
+i3-wm.workspace.17.name:	17:<span font_desc='mononoki Nerd Font 13'> 17 </span>
+i3-wm.workspace.18.name:	18:<span font_desc='mononoki Nerd Font 13'> 18 </span>
+i3-wm.workspace.19.name:	19:<span font_desc='mononoki Nerd Font 13'> 19 </span>
 i3-wm.window.border.size: 4
 i3-wm.workspace.auto_back_and_forth: yes
 i3-wm.gaps.focus_follows_mouse: yes

@@ -679,6 +679,6 @@ exec --no-startup-id $i3-wm.program.3
 # Open apps in specific workspaces
 ###############################################################################
 
-for_window [class="Slack"] move to workspace $ws3
+for_window [class="Slack"] move to workspace $ws2
 for_window [class="Spotify"] move to workspace $ws5
 for_window [class="Microsoft Teams - Preview"] move to workspace $ws4
