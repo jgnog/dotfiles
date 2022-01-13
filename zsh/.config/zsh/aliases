@@ -12,3 +12,4 @@ alias mux=tmuxinator
 alias vim=nvim
 alias vi=nvim
 alias bat=batcat
+alias avenv='source venv/bin/activate'
