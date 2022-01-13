@@ -89,14 +89,14 @@ mixer_value() {
 LABEL_COLOR=${label_color:-$(xrescat i3xrocks.label.color "#E6E1CF")}
 
 if [ "$(mixer_status)" == "on" ]; then
-    ICON=
+    ICON=''
     VALUE_COLOR=${color:-$(xrescat i3xrocks.value.color "#E6E1CF")}
 else
-    ICON=
+    ICON=''
     VALUE_COLOR=${warn_color:-$(xrescat i3xrocks.warning "#FFD580")}
 fi
 
 VALUE_FONT=${font:-$(xrescat i3xrocks.value.font "Source Code Pro Medium 13")}
 VALUE=$(mixer_value)
 
-echo "<span color=\"${LABEL_COLOR}\">${ICON}</span><span font_desc=\"${VALUE_FONT}\" color=\"${VALUE_COLOR}\"> $VALUE</span>"
+echo "<span color=\"${LABEL_COLOR}\">${ICON}</span><span font_desc=\"${VALUE_FONT}\" color=\"${VALUE_COLOR}\">MIC $VALUE</span>"
