@@ -275,3 +275,6 @@ nnoremap <leader>t :15split term://bash<CR>i
 " Use PageUp and PageDown to navigate buffers
 nnoremap <PageUp> :bprevious<CR>
 nnoremap <PageDown> :bnext<CR>
+
+" Mappings to vimgrep word under cursor
+nnoremap gr :vimgrep <cword> **<CR>
