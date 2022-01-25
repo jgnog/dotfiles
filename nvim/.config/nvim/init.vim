@@ -278,3 +278,11 @@ nnoremap <PageDown> :bnext<CR>
 
 " Mappings to vimgrep word under cursor
 nnoremap gr :vimgrep <cword> **<CR>
+
+function GrepInPath(query)
+    exec ':grep '. a:query .' -R '. join(split(&path, ","), " ")
+endf
+
+command -nargs=1 GrepInPath call GrepInPath(<f-args>)
+
+nnoremap grp :GrepInPath <cword><CR>
