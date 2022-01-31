@@ -1,22 +1,25 @@
-" This is a set of configuration tailored to a dbt project
-" To use it, copy it to the root of the dbt project and give it the
-" name .exrc
-"
-" When Vim starts from that directory, it will source this file
-
-set path=data/**,models/**,macros/**,target/compiled/**,target/run/**,
+set path=data/**,models/**,macros/**,tests/**,target/compiled/**,target/run/**
 set suffixesadd+=.sql
 
-au BufNewFile,BufRead ./target/** setlocal nomodifiable
+au BufNewFile,BufRead target/** setlocal nomodifiable
 
 " Go to the compiled version of the current model
 function GoToCompiled()
     set path=target/compiled/**,
     execute 'find %:t'
     " Restore the path option
-    set path=data/**,models/**,macros/**,target/compiled/**,target/run/**,
+    set path=data/**,models/**,macros/**,tests/**,target/compiled/**,target/run/**
 endfunction
 command GoToCompiled call GoToCompiled()
+
+" Go to the run version of the current model
+function GoToRun()
+    set path=target/run/**,
+    execute 'find %:t'
+    " Restore the path option
+    set path=data/**,models/**,macros/**,tests/**,target/compiled/**,target/run/**
+endfunction
+command GoToRun call GoToRun()
 
 " Go to the model of the current file
 " Useful when you are looking at the compiled or run versions
@@ -24,9 +27,10 @@ function GoToModel()
     set path=models/**,
     execute 'find %:t'
     " Restore the path option
-    set path=data/**,models/**,macros/**,target/compiled/**,target/run/**,
+    set path=data/**,models/**,macros/**,tests/**,target/compiled/**,target/run/**
 endfunction
 command GoToModel call GoToModel()
 
 nnoremap <leader>gc :GoToCompiled<CR>
+nnoremap <leader>gr :GoToRun<CR>
 nnoremap <leader>gm :GoToModel<CR>
