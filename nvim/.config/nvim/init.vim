@@ -8,9 +8,12 @@ Plug 'habamax/vim-sendtoterm'
 Plug 'ledger/vim-ledger'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jpalardy/vim-slime'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating'
 call plug#end()
 
 
@@ -236,7 +239,8 @@ nnoremap <leader>e :Lexplore<CR>
 nnoremap <leader>c ggVG"+y
 
 " Shortcut to open fzf
-nnoremap <leader>o :FZF<CR>
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
 
 " Shortcut to get the current filename into the unnamed register
 " You can then paste it using p in normal mode
@@ -286,3 +290,6 @@ endf
 command -nargs=1 GrepInPath call GrepInPath(<f-args>)
 
 nnoremap grp :GrepInPath <cword><CR>
+
+highlight ExtraWhitespace ctermbg=4 guibg=darkred
+autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
