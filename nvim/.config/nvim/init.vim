@@ -291,5 +291,5 @@ command -nargs=1 GrepInPath call GrepInPath(<f-args>)
 
 nnoremap grp :GrepInPath <cword><CR>
 
-highlight ExtraWhitespace ctermbg=4 guibg=darkred
+highlight ExtraWhitespace ctermbg=lightred guibg=lightred
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
