@@ -20,7 +20,8 @@ call plug#end()
 " Some basic configuration
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching
-set smartcase              " case insensitive
+set ignorecase              " case insensitive
+set smartcase
 set mouse=v                 " middle-click paste with
 set hlsearch                " highlight search
 set tabstop=4               " number of columns occupied by a tab
