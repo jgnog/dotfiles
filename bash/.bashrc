@@ -293,3 +293,5 @@ export PATH="$HOME/.local/bin:$PATH"
 source /usr/share/doc/fzf/examples/key-bindings.bash
 # Add fzf auto-completion
 source /usr/share/doc/fzf/examples/completion.bash
+
+complete -C /usr/bin/terraform terraform

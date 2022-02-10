@@ -1,11 +1,12 @@
 
 # Load more completions
-fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
+fpath=($ZDOTDIR/completions $fpath)
 
 # Should be called before compinit
 zmodload zsh/complist
 
 autoload -U compinit; compinit
+autoload -U bashcompinit; bashcompinit
 _comp_options+=(globdots) # With hidden files
 
 # +---------+
