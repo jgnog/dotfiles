@@ -1,0 +1,5 @@
+[Unit]
+Description=Sync files between a local folder and a remote folder using RClone
+[Service]
+Type=simple
+ExecStart="%h/.local/bin/rclone-sync"

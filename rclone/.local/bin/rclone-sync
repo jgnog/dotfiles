@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+rclone sync $HOME/my-notes gdrive:my-notes
+rclone sync "$HOME/Calibre Library" gdrive:"Calibre Library"
