@@ -42,9 +42,16 @@ source $HOME/.config/zsh/fzf-completion.zsh
 # You may want to put all your additions into a separate file like
 # ~/.aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
- 
+
 if [ -f $ZDOTDIR/aliases ]; then
 . $ZDOTDIR/aliases
 fi
 
 source $ZDOTDIR/completion.zsh
+
+
+# Enable Ctrl-x-e to edit command line
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line

@@ -12,3 +12,6 @@ alias vi=nvim
 alias bat=batcat
 alias avenv='source venv/bin/activate'
 alias aptup='sudo apt update && sudo apt upgrade'
+alias aws-login='aws-adfs login --profile dundata-dl-dev && export AWS_PROFILE=dundata-dl-dev'
+alias activate-py-venv='source venv/bin/activate'
+alias tpl='~/tf-pipeline-library/pipeline_tf.sh'
