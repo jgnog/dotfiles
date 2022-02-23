@@ -12,7 +12,7 @@ nvim/.local/share/nvim/site/autoload/plug.vim:
 		   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 install: uninstall # Always uninstall before installing
-	ls -d */ | grep -v bin | xargs stow --no-folding 
+	ls -d */ | grep -v bin | xargs stow --no-folding  --ignore=README.*
 
 uninstall:
 	ls -d */ | grep -v bin | xargs stow -D --no-folding 
