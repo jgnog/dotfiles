@@ -12,3 +12,4 @@ alias mux=tmuxinator
 alias vim=nvim
 alias vi=nvim
 alias tmuxatt='tmux -2 attach'
+alias pomo='killall -SIGUSR1 dunst && sleep 25m && killall -SIGUSR2 dunst && notify-send "Pomo finish"'
