@@ -296,3 +296,7 @@ nnoremap grp :GrepInPath <cword><CR>
 
 highlight ExtraWhitespace ctermbg=lightred guibg=lightred
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+" Sometimes syntax highlighting seems to be off for part of a file
+" This command fixes it.
+noremap <F12> <Esc>:syntax sync fromstart<CR>
