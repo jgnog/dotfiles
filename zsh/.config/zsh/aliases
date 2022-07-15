@@ -11,10 +11,12 @@ alias vim=nvim
 alias vi=nvim
 alias bat=batcat
 alias avenv='source venv/bin/activate'
-alias aptup='sudo apt update && sudo apt upgrade'
+alias aptup='sudo apt update && sudo apt upgrade -y'
 alias aws-login='aws-adfs login --profile dundata-dl-dev && export AWS_PROFILE=dundata-dl-dev'
 alias activate-py-venv='source venv/bin/activate'
 alias tpl='~/tf-pipeline-library/pipeline_tf.sh'
 alias dnd='killall -SIGUSR1 dunst'
 alias nodnd='killall -SIGUSR2 dunst'
 alias pomo='killall -SIGUSR1 dunst && sleep 25m && killall -SIGUSR2 dunst && notify-send -u critical "Pomo finish"'
+alias pomobreak='killall -SIGUSR1 dunst && sleep 5m && killall -SIGUSR2 dunst && notify-send -u critical "Pomo finish"'
+alias cal='ncal -bw'
