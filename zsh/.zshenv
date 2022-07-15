@@ -10,7 +10,7 @@ export SAVEHIST=10000                   # Maximum events in history file
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
 export PATH
 
 # Note-taking system
