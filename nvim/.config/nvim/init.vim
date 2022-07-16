@@ -127,7 +127,8 @@ let g:netrw_winsize=20
 " Custom commands
 
 function NewNote ()
-    execute 'edit '.printf('%x', str2nr(strftime('%Y%m%d%H%M'))).".md"
+    let random_nr = system('shuf -i 0-16777215 -n1')
+    execute 'edit '.printf('%x', random_nr).".md"
     execute 'norm A#'
     put=strftime('%Y-%m-%d %H:%M')
 endfunction
