@@ -17,13 +17,10 @@ install: uninstall # Always uninstall before installing
 uninstall:
 	ls -d */ | grep -v bin | xargs stow -D --no-folding 
 
-add-repositories:
-	sudo add-apt-repository ppa:regolith-linux/release
-
 install-python-packages: install-packages
 	pip install -r python-packages
 
-install-packages: add-repositories
+install-packages:
 	cat packages | xargs sudo apt install --yes
 
 install-snaps:

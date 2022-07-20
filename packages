@@ -16,8 +16,6 @@ make
 ncdu
 neofetch
 pandoc
-regolith-desktop-mobile
-regolith-look-gruvbox
 rsync
 silversearcher-ag
 stow
@@ -26,7 +24,6 @@ tmuxinator
 ubuntu-restricted-extras
 xclip
 zsh
-zathura
 tree
 python3-venv
 python3-pip
@@ -44,4 +41,3 @@ bat
 pdftk
 gawk
 gnumeric
-dunst

@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# Add PPA and install Regolith Linux for laptops
-add-apt-repository ppa:regolith-linux/release
-apt install regolith-desktop-mobile
-
-# Install Regolith Gruvbox look
-apt install regolith-look-gruvbox
