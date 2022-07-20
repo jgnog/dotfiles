@@ -20,8 +20,17 @@ uninstall:
 install-python-packages: install-packages
 	pip install -r python-packages
 
-install-packages:
+install-packages: add-repositories
 	cat packages | xargs sudo apt install --yes
+
+add-repositories:
+	bin/add_repositories.sh && sudo apt update
+
+add-flathub: install-packages
+	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+install_flatpaks: install-packages add-flathub
+	cat flatpaks | xargs sudo flatpak install --assumeyes flathub 
 
 install-snaps:
 	bin/install_snaps snaps

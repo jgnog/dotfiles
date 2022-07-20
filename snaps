@@ -1,3 +1,2 @@
 nvim --classic
-node --classic --channel=17
 chromium

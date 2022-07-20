@@ -41,3 +41,6 @@ bat
 pdftk
 gawk
 gnumeric
+flatpak
+nodejs
+neovim
