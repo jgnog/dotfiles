@@ -285,16 +285,14 @@ nnoremap <leader>t :15split term://zsh<CR>i
 nnoremap <PageUp> :bprevious<CR>
 nnoremap <PageDown> :bnext<CR>
 
-" Mappings to vimgrep word under cursor
-nnoremap gr :vimgrep <cword> **<CR>
-
-function GrepInPath(query)
-    exec ':grep '. a:query .' -R '. join(split(&path, ","), " ")
-endf
-
-command -nargs=1 GrepInPath call GrepInPath(<f-args>)
-
-nnoremap grp :GrepInPath <cword><CR>
+" Use the silversearcher instead of ack for ack.vim
+" if it is available
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+    nnoremap gr :Ack <cword>
+else
+    nnoremap gr :vimgrep <cword> **
+endif
 
 highlight ExtraWhitespace ctermbg=lightred guibg=lightred
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
