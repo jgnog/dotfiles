@@ -15,6 +15,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-fugitive'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 
@@ -278,7 +279,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Open a small horizontal terminal and enter Terminal mode
-nnoremap <leader>t :15split term://bash<CR>i
+nnoremap <leader>t :15split term://zsh<CR>i
 
 " Use PageUp and PageDown to navigate buffers
 nnoremap <PageUp> :bprevious<CR>
