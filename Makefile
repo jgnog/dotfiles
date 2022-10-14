@@ -4,11 +4,11 @@ SHELL := /bin/bash
 
 .PHONY: install_vim_plugins install uninstall
 
-install_nvim_plugins: nvim/.local/share/nvim/site/autoload/plug.vim install-snaps
+install_nvim_plugins: nvim/.config/nvim/autoload/plug.vim install-snaps
 	nvim +PluginInstall +qall
 
-nvim/.local/share/nvim/site/autoload/plug.vim:
-	curl -fLo nvim/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+nvim/.config/nvim/autoload/plug.vim:
+	curl -fLo nvim/.config/nvim/autoload/plug.vim --create-dirs \
 		   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 install: uninstall # Always uninstall before installing

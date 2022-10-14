@@ -1,5 +1,5 @@
 " Plugin management
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
