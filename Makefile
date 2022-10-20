@@ -10,10 +10,10 @@ install_nvim_plugins: dotfiles/nvim/.config/nvim/autoload/plug.vim install-snaps
 dotfiles/nvim/.config/nvim/autoload/plug.vim:
 	curl -fLo $@ --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-stow-apps: install-packages
+stow-apps:
 	cd apps && ls | xargs sudo stow --no-folding -R -t /usr/local
 
-stow-dotfiles: install-packages
+stow-dotfiles:
 	cd dotfiles && ls | xargs sudo stow --no-folding -R -t ${HOME}
 
 install-python-packages: install-apt-packages
