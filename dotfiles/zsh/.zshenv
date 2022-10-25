@@ -11,7 +11,7 @@ export HISTCONTROL=ignoreboth
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-PATH="$HOME/bin:$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/.poetry/bin:$HOME/.cargo/bin:$PATH"
 export PATH
 
 # Note-taking system
