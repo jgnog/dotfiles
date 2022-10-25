@@ -35,3 +35,9 @@ install_flatpaks: install-apt-packages add-flathub
 
 install-snaps: install-apt-packages
 	bin/install_snaps packages/snap
+
+install-cargo-packages: install-apt-packages
+	cat packages/cargo | xargs cargo install
+
+populate-apt-packges:
+	apt-mark showmanual > packages/apt
