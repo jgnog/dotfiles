@@ -22,3 +22,4 @@ alias pomobreak='killall -SIGUSR1 dunst && sleep 5m && killall -SIGUSR2 dunst &&
 alias cal='ncal -bw'
 alias xop='xdg-open'
 alias ntf='~/tf-pipeline-library/pipeline/scripts/prepare.sh'
+alias dateiso='date +"%F"'
