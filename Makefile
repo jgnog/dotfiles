@@ -19,12 +19,12 @@ stow-dotfiles:
 install-python-packages: install-apt-packages
 	pip install --user -r packages/pip
 
-install-apt-packages: add-repositories
+install-apt-packages: add-repositories packages/apt
 	cat packages/apt | xargs sudo apt install --yes
 
 install-packages: install-apt-packages install-python-packages install_flatpaks install-snaps
 
-add-repositories:
+add-repositories: bin/add_repositories.sh
 	bin/add_repositories.sh && sudo apt update
 
 add-flathub: install-apt-packages

@@ -132,6 +132,7 @@ picom
 pinta
 pkg-config
 progress
+postgresql-client
 python3
 python3-apt
 python3-distutils

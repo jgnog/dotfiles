@@ -301,3 +301,8 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 " Sometimes syntax highlighting seems to be off for part of a file
 " This command fixes it.
 noremap <F12> <Esc>:syntax sync fromstart<CR>
+
+" Do a search with / and then press this keymap. Everything will be folded
+" except for the lines that match the search
+" This cryptic foldexpr was taken from https://vim.fandom.com/wiki/Folding_with_Regular_Expression
+nnoremap <leader>zs :setlocal foldexpr=(getline(v:lnum)=~@/)?0:(getline(v:lnum-1)=~@/)\\|\\|(getline(v:lnum+1)=~@/)?1:2 foldmethod=expr foldlevel=0 foldcolumn=2<CR>

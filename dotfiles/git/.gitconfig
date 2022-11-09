@@ -17,6 +17,7 @@
     br = branch
     logg = log --graph --oneline
     unstage = reset HEAD
+    dfs = diff --staged
 [pull]
 	rebase = false
 [merge]
