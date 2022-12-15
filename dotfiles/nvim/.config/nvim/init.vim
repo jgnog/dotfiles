@@ -306,3 +306,6 @@ noremap <F12> <Esc>:syntax sync fromstart<CR>
 " except for the lines that match the search
 " This cryptic foldexpr was taken from https://vim.fandom.com/wiki/Folding_with_Regular_Expression
 nnoremap <leader>zs :setlocal foldexpr=(getline(v:lnum)=~@/)?0:(getline(v:lnum-1)=~@/)\\|\\|(getline(v:lnum+1)=~@/)?1:2 foldmethod=expr foldlevel=0 foldcolumn=2<CR>
+
+" Highlight code blocks in Markdown files
+let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'vim', 'c']
