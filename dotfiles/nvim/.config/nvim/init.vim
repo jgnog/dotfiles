@@ -15,6 +15,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
 Plug 'mileszs/ack.vim'
 Plug 'shumphrey/fugitive-gitlab.vim'
 call plug#end()
