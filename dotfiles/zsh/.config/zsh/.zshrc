@@ -59,3 +59,7 @@ bindkey '^x^e' edit-command-line
 function agfzf() {
     ag -l "$1" | fzf --preview='batcat {}' --multi | xargs nvim
 }
+
+function muxsess() {
+    tmux new-session -s "$1"
+}
