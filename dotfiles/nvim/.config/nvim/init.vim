@@ -131,7 +131,7 @@ let g:netrw_winsize=20
 
 function NewNote ()
     let random_nr = system('shuf -i 0-16777215 -n1')
-    execute 'edit $NOTESDIR/staging/'.printf('%x', random_nr).".md"
+    execute 'edit '"n_".printf('%x', random_nr).".md"
     execute 'norm A#'
     put=strftime('%Y-%m-%d %H:%M')
 endfunction

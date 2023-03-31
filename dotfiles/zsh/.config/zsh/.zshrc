@@ -25,8 +25,8 @@ cheat () {
 newnote () {
     # Get the current date in the format yyyymmddhhmm and convert it to hexadecimal
     # and append the md extension. Finally, open it using the environment's editor
-    new_filename=$(printf '%x\n' $(shuf -i 0-16777215 -n1)).md
-    cd $NOTESDIR/staging
+    new_filename=n_$(printf '%x\n' $(shuf -i 0-16777215 -n1)).md
+    cd $NOTESDIR
     touch $new_filename
     echo "#" >> $new_filename
     date +"%Y-%m-%d %H:%M" >> $new_filename
