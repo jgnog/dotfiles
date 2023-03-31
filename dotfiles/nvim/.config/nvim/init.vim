@@ -308,6 +308,8 @@ else
     nnoremap gr :vimgrep <cword> **
 endif
 
+nnoremap <leader>a :Ack
+
 highlight ExtraWhitespace ctermbg=lightred guibg=lightred
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
