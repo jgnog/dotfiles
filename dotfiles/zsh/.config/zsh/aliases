@@ -13,7 +13,6 @@ alias bat=batcat
 alias avenv='source venv/bin/activate'
 alias aptup='sudo apt update && sudo apt upgrade -y'
 alias aws-login='aws-adfs login --profile dundata-dl-dev && export AWS_PROFILE=dundata-dl-dev'
-alias pomo='xdg-open $HOME/dotfiles/media/pomodoro.mp3'
 alias cal='ncal -bw'
 alias xop='xdg-open'
 alias ntf='~/tf-pipeline-library/pipeline/scripts/prepare.sh'

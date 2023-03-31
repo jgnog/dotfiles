@@ -63,3 +63,8 @@ function agfzf() {
 function muxsess() {
     tmux new-session -s "$1"
 }
+
+function pomo() {
+    nohup play -c2 -n synth $1:00 pinknoise 40 > /dev/null &
+}
+
