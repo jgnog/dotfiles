@@ -159,6 +159,7 @@ rsync
 shim-signed
 silversearcher-ag
 software-properties-common
+sox
 sshfs
 steam-launcher
 steam-libs-amd64
