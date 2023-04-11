@@ -65,6 +65,6 @@ function muxsess() {
 }
 
 function pomo() {
-    nohup play -c2 -n synth $1:00 pinknoise 40 > /dev/null &
+    tmux new-window -d -n pomo 'nohup play -c2 -n synth "$1":00 pinknoise 60 > /dev/null & termdown "$1"m'
 }
 
