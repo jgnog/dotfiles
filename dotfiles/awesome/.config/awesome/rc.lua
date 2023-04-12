@@ -272,6 +272,15 @@ root.buttons(gears.table.join(
 globalkeys = gears.table.join(
     awful.key({ modkey }, "l", function () awful.spawn("slock") end,
              {description = "lock screen", group = "awesome"}),
+    -- Volume control
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.spawn("pulsemixer --change-volume +5") end,
+              {description = "increase volume", group = "audio"}),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.spawn("pulsemixer --change-volume -5") end,
+              {description = "decrease volume", group = "audio"}),
+    awful.key({ }, "XF86AudioMute", function () awful.spawn("pulsemixer --toggle-mute") end,
+             {description = "mute", group = "audio"}),
+    awful.key({ modkey, "Control" }, "m", function () awful.spawn("pactl set-source-mute @DEFAULT_SOURCE@ toggle") end,
+             {description = "mute mic", group = "audio"}),
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
