@@ -112,6 +112,8 @@ else
     })
 end
 
+praisewidget = wibox.widget.textbox()
+praisewidget.text = "You are great!"
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
@@ -245,6 +247,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
+            praisewidget,
             s.mytaglist,
             s.mypromptbox,
         },
