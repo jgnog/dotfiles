@@ -68,3 +68,20 @@ function pomo() {
     tmux new-window -d -n pomo 'nohup play -c2 -n synth "$1":00 pinknoise 60 > /dev/null & termdown "$1"m'
 }
 
+function switch_jabra_profile() {
+    # Possible profiles are: a2dp_sink (normal playback) and handsfree_head_unit (for calls)
+    jabra_card_id="bluez_card.08_C8_C2_63_08_93"
+    current_profile=$(pacmd list-cards | grep -A 30 'name: <'$jabra_card_id'>' | grep 'active profile' | awk -F': ' '{print $2}' | tr -d '<>')
+    if [ "$current_profile" = "handsfree_head_unit" ]
+    then
+        echo "Switching to a2dp_sink"
+        pacmd set-card-profile $jabra_card_id a2dp_sink
+    elif [ "$current_profile" = "a2dp_sink" ]
+    then
+        echo "Switching to handsfree_head_unit"
+        pacmd set-card-profile $jabra_card_id handsfree_head_unit
+    else
+        echo "Unknown profile"
+    fi
+}
+
