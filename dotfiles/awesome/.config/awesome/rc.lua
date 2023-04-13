@@ -624,3 +624,6 @@ awful.spawn.with_shell("nitrogen --set-scaled $HOME/dotfiles/media/wallpapers/co
 screen.connect_signal("property::geometry", function(s)
     awful.spawn.with_shell("nitrogen --set-scaled $HOME/dotfiles/media/wallpapers/colorful_triangles.jpg &")
 end)
+
+-- Launch the NetworkManager applet
+awful.spawn.with_shell("nm-applet")
