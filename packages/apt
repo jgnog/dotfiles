@@ -158,6 +158,7 @@ python3.9-venv
 r-base
 rclone
 regionset
+rofi
 rsync
 shim-signed
 silversearcher-ag
