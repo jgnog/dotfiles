@@ -188,7 +188,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     local names = {
-        "term",
+        "main",
         "www",
         "im",
         "mus",
