@@ -330,6 +330,8 @@ globalkeys = gears.table.join(
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Shift" }, "Return", function () awful.spawn("chromium") end,
           {description = "Chromium browser", group = "launcher"}),
+    awful.key({ }, "Print", function () awful.spawn("flameshot gui") end,
+          {description = "Take screenshot", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -627,3 +629,6 @@ end)
 
 -- Launch the NetworkManager applet
 awful.spawn.with_shell("nm-applet")
+
+-- Launch Flameshot
+awful.spawn.with_shell("flameshot")
