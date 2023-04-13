@@ -279,7 +279,7 @@ globalkeys = gears.table.join(
               {description = "decrease volume", group = "audio"}),
     awful.key({ }, "XF86AudioMute", function () awful.spawn("pulsemixer --toggle-mute") end,
              {description = "mute", group = "audio"}),
-    awful.key({ modkey, "Control" }, "m", function () awful.spawn("pactl set-source-mute @DEFAULT_SOURCE@ toggle") end,
+    awful.key({ }, "Pause", function () awful.spawn("pactl set-source-mute @DEFAULT_SOURCE@ toggle") end,
              {description = "mute mic", group = "audio"}),
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
