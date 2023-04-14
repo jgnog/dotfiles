@@ -192,7 +192,7 @@ awful.screen.connect_for_each_screen(function(s)
         "www",
         "im",
         "mus",
-        "5",
+        "notes",
         "6",
         "7",
         "8",
