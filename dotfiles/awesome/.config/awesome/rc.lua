@@ -386,7 +386,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
 
-    awful.key({ "Mod1", "Shift" }, "space", function () os.execute("setxkbmap -query | grep -q 'us$' && setxkbmap pt || setxkbmap us") end,
+    awful.key({"Control"}, "space", function () os.execute("setxkbmap -query | grep -q 'us$' && setxkbmap pt || setxkbmap us") end,
              {description = "switch between PT and US keyboard layouts", group = "keyboard"})
 )
 
