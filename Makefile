@@ -4,7 +4,7 @@ SHELL := /bin/bash
 
 .PHONY: install_vim_plugins install uninstall
 
-install_nvim_plugins: dotfiles/nvim/.config/nvim/autoload/plug.vim install-snaps
+install_nvim_plugins: dotfiles/nvim/.config/nvim/autoload/plug.vim
 	nvim +PluginInstall +qall
 
 dotfiles/nvim/.config/nvim/autoload/plug.vim:
