@@ -14,7 +14,7 @@ stow-apps:
 	cd apps && ls | xargs sudo stow --no-folding -R -t /usr/local
 
 stow-dotfiles:
-	cd dotfiles && ls | xargs sudo stow --no-folding -R -t ${HOME}
+	cd dotfiles && ls | xargs stow --no-folding -R -t ${HOME}
 
 install-python-packages: install-apt-packages
 	pip install --user -r packages/pip
