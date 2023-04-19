@@ -33,9 +33,6 @@ add-flathub: install-apt-packages
 install_flatpaks: install-apt-packages add-flathub
 	cat packages/flatpak | xargs sudo flatpak install --assumeyes flathub 
 
-install-snaps: install-apt-packages
-	bin/install_snaps packages/snap
-
 install-cargo-packages: install-apt-packages
 	cat packages/cargo | xargs cargo install
 
