@@ -18,6 +18,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'mileszs/ack.vim'
 Plug 'shumphrey/fugitive-gitlab.vim'
+Plug 'sersorrel/vim-lilypond'
 call plug#end()
 
 
