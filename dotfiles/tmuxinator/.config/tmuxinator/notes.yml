@@ -40,4 +40,4 @@ tmux_command: tmux -2
 # attach: false
 
 windows:
-  - notes: ls *.md | grep -v 2.* | grep -v README | xargs nvim
+  - notes: nvim todo.md projects.md
