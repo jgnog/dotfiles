@@ -142,7 +142,7 @@ function LinkedNote ()
     let current_filename = expand("%")
     let random_nr = system('shuf -i 0-16777215 -n1')
     let filename = 'n_' . printf('%x', random_nr) . '.md'
-    let failed = setline('.', getline('.') . '<' . filename . '>')
+    let failed = setline('.', getline('.') . ' <' . filename . '>')
     execute 'edit '"n_".printf('%x', random_nr).".md"
     execute 'norm A#'
     put=strftime('%Y-%m-%d %H:%M')
