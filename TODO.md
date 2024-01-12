@@ -1,5 +1,2 @@
 - [ ] Read the Vim man pages for tabs and optimize the current config
-- [ ] Find the list of added repositores for apt and include that in dotfiles
 - [ ] Include script to install mononoki Nerd font
-- [ ] Install [UltimatePlumber](https://github.com/akavel/up)
-- [ ] Install [Docker](https://docs.docker.com/engine/install/ubuntu/)
