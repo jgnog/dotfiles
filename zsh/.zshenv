@@ -27,3 +27,9 @@ PRIVATE_ENV_FILE="$HOME/.config/zsh/private_zshenv"
 if [ -f $PRIVATE_ENV_FILE ]; then
     source "$HOME/.config/zsh/private_zshenv"
 fi
+
+# Add Homebrew to PATH
+export PATH=/opt/homebrew/bin:$PATH
+
+# Enable color on Mac terminal
+export CLICOLOR=1

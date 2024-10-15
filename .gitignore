@@ -2,3 +2,4 @@
 *.swp
 *.log
 dev-fs/
+.DS_Store
