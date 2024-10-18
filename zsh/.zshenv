@@ -33,3 +33,6 @@ export PATH=/opt/homebrew/bin:$PATH
 
 # Enable color on Mac terminal
 export CLICOLOR=1
+
+# Add MacOS paths to PATH
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
