@@ -30,3 +30,14 @@ if [ -f $PRIVATE_ENV_FILE ]; then
 fi
 
 export DEFAULT_MODEL=gpt-4o-mini
+
+# MacOS
+
+# Add Homebrew to PATH
+export PATH=/opt/homebrew/bin:$PATH
+
+# Enable color on Mac terminal
+export CLICOLOR=1
+
+# Add MacOS paths to PATH
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
