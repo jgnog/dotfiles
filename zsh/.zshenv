@@ -28,3 +28,5 @@ PRIVATE_ENV_FILE="$HOME/.config/zsh/private_zshenv"
 if [ -f $PRIVATE_ENV_FILE ]; then
     source "$HOME/.config/zsh/private_zshenv"
 fi
+
+export DEFAULT_MODEL=gpt-4o-mini
