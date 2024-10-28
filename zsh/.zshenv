@@ -12,6 +12,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 PATH="$HOME/bin:$HOME/.local/bin:$HOME/.poetry/bin:$HOME/.cargo/bin:$PATH"
+PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH
 
 # Note-taking system
@@ -27,6 +28,10 @@ PRIVATE_ENV_FILE="$HOME/.config/zsh/private_zshenv"
 if [ -f $PRIVATE_ENV_FILE ]; then
     source "$HOME/.config/zsh/private_zshenv"
 fi
+
+export DEFAULT_MODEL=gpt-4o-mini
+
+# MacOS
 
 # Add Homebrew to PATH
 export PATH=/opt/homebrew/bin:$PATH
