@@ -324,7 +324,7 @@ endif
 nnoremap <leader>a :Ack
 
 highlight ExtraWhitespace ctermbg=lightred guibg=lightred
-autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+autocmd BufModifiedSet * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 " Sometimes syntax highlighting seems to be off for part of a file
 " This command fixes it.
