@@ -23,6 +23,7 @@ alias todo='$EDITOR $NOTESDIR/todo.md'
 alias xclip='xclip -sel clip'
 alias killbg='kill ${${(v)jobstates##*:*:}%=*}'
 alias ureload='xrdb -merge ~/.Xresources'
+alias shuf='gshuf'
 
 # If OS is MacOS, unalias bat
 # This is because the command for bat in Linux is batcat, hence the previous
