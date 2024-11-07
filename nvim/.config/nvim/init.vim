@@ -321,7 +321,7 @@ else
     nnoremap gr :vimgrep <cword> **
 endif
 
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack!
 
 highlight ExtraWhitespace ctermbg=lightred guibg=lightred
 autocmd BufModifiedSet * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
