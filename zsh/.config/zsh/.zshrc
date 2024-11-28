@@ -7,6 +7,7 @@ setopt CD_SILENT
 setopt CORRECT
 setopt HASH_LIST_ALL
 setopt VI
+setopt share_history
 
 unsetopt CASE_GLOB
 
@@ -84,4 +85,3 @@ function switch_jabra_profile() {
         echo "Unknown profile"
     fi
 }
-
