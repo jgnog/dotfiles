@@ -337,3 +337,6 @@ nnoremap <leader>zs :setlocal foldexpr=(getline(v:lnum)=~@/)?0:(getline(v:lnum-1
 
 " Highlight code blocks in Markdown files
 let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'vim', 'c']
+
+" Open vim-fugitive buffer
+nnoremap <leader>g :G
