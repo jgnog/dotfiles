@@ -327,3 +327,6 @@ let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'vim', 'c']
 
 " Open vim-fugitive buffer
 nnoremap <leader>g :G<CR>
+
+" Highlight .hcl files as .tf files
+autocmd BufRead,BufNewFile *.hcl set filetype=tf
