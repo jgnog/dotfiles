@@ -34,6 +34,10 @@ newnote () {
     $EDITOR $new_filename
 }
 
+stripbreaks () {
+    awk 'BEGIN {RS=""; FS="\n"; ORS="\n\n"} {gsub(/\n/, " ", $0); print}' "$@"
+}
+
 # Add fzf keybindings
 source $HOME/.config/zsh/fzf-key-bindings.zsh
 # Add fzf auto-completion
