@@ -22,7 +22,7 @@ export LEDGER_FILE=~/personal-finances/ribnog.ledger
 
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+export PATH="$HOME/gems/bin:/usr/sbin:$PATH"
 
 PRIVATE_ENV_FILE="$HOME/.config/zsh/private_zshenv"
 if [ -f $PRIVATE_ENV_FILE ]; then
