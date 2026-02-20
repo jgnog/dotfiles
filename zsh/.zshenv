@@ -12,7 +12,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 PATH="$HOME/bin:$HOME/.local/bin:$HOME/.poetry/bin:$HOME/.cargo/bin:$PATH"
-PATH="$PATH:/opt/nvim-linux64/bin"
+PATH="$PATH:/opt/nvim/bin"
 export PATH
 
 # Note-taking system
