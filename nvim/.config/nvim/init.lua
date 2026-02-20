@@ -24,7 +24,6 @@ Plug 'tpope/vim-obsession'
 Plug 'mileszs/ack.vim'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'sersorrel/vim-lilypond'
-Plug 'github/copilot.vim'
 call plug#end()
 ]]
 
