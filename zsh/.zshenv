@@ -15,6 +15,7 @@ PATH="$HOME/bin:$HOME/.local/bin:$HOME/.config/local/bin:$HOME/.poetry/bin:$HOME
 PATH="$PATH:/opt/nvim-linux64/bin"
 PATH="$HOME/.opencode/bin:$PATH"
 PATH="/opt/homebrew/bin:$PATH"
+PATH="$PATH:/opt/nvim/bin"
 export PATH
 
 # Note-taking system
