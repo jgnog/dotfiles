@@ -11,8 +11,10 @@ export HISTCONTROL=ignoreboth
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-PATH="$HOME/bin:$HOME/.local/bin:$HOME/.poetry/bin:$HOME/.cargo/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/.config/local/bin:$HOME/.poetry/bin:$HOME/.cargo/bin:$PATH"
 PATH="$PATH:/opt/nvim-linux64/bin"
+PATH="$HOME/.opencode/bin:$PATH"
+PATH="/opt/homebrew/bin:$PATH"
 export PATH
 
 # Note-taking system
@@ -32,12 +34,5 @@ fi
 export DEFAULT_MODEL=gpt-4o-mini
 
 # MacOS
-
-# Add Homebrew to PATH
-export PATH=/opt/homebrew/bin:$PATH
-
 # Enable color on Mac terminal
 export CLICOLOR=1
-
-# Add MacOS paths to PATH
-export PATH="$HOME/Library/Python/3.9/bin:$PATH"
