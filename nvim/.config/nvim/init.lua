@@ -149,40 +149,66 @@ vim.g.netrw_winsize = 20
 
 -- Converted NewNote function to Lua
 vim.api.nvim_create_user_command('NewNote', function()
-    local handle = io.popen('shuf -i 0-16777215 -n1')
-    local random_nr = handle:read("*a"):gsub("%s+", "")
-    handle:close()
-    
-    local hex_nr = string.format("%x", tonumber(random_nr))
+    -- 1. Generate the random hex filename
+    math.randomseed(os.time())
+    local hex_nr = string.format("%x", math.random(0, 16777215))
     local filename = "n_" .. hex_nr .. ".md"
-    
+
+    -- 2. Open the new file
     vim.cmd('edit ' .. filename)
-    vim.cmd('norm A#')
-    -- Insert date on next line
-    vim.fn.append(vim.fn.line('.'), os.date('%Y-%m-%d %H:%M'))
+
+    -- 3. Define the clean file structure
+    local content = {
+        "# ", -- Start with an empty H1 title
+        os.date('%Y-%m-%d %H:%M'),
+        "",   -- Empty line for the body text
+    }
+
+    -- 4. Replace the entire buffer content to avoid extra blank lines
+    vim.api.nvim_buf_set_lines(0, 0, -1, false, content)
+
+    -- 5. Place the cursor at the end of the first line (after the '# ')
+    -- so you can type the title immediately.
+    vim.api.nvim_win_set_cursor(0, {1, 2})
+
+    -- Optional: Uncomment the line below to start in Insert Mode automatically
+    -- vim.cmd('startinsert!')
 end, {})
 
--- Converted LinkedNote function to Lua
 vim.api.nvim_create_user_command('LinkedNote', function()
     local current_filename = vim.fn.expand("%")
-    
-    local handle = io.popen('shuf -i 0-16777215 -n1')
-    local random_nr = handle:read("*a"):gsub("%s+", "")
-    handle:close()
-    
-    local hex_nr = string.format("%x", tonumber(random_nr))
+    local line = vim.api.nvim_get_current_line()
+    local col = vim.api.nvim_win_get_cursor(0)[2]
+
+    -- 1. Extract the title from the brackets [Title]
+    local prefix = line:sub(1, col + 1)
+    local link_title = prefix:match("%[([^%]]+)%]%s*$") or "Untitled"
+
+    -- 2. Generate the random hex filename
+    math.randomseed(os.time())
+    local hex_nr = string.format("%x", math.random(0, 16777215))
     local new_filename = 'n_' .. hex_nr .. '.md'
-    
-    -- Append link to current file
-    vim.fn.setline('.', vim.fn.getline('.') .. '(' .. new_filename .. ')')
-    
-    -- Edit new file
+
+    -- 3. Update current line with the link
+    vim.api.nvim_set_current_line(line .. '(' .. new_filename .. ')')
+
+    -- 4. Create and set up the new file
     vim.cmd('edit ' .. new_filename)
-    vim.cmd('norm A#')
-    vim.fn.append(vim.fn.line('.'), os.date('%Y-%m-%d %H:%M'))
-    
-    -- Append parent link at the end of the new file
-    vim.fn.append(vim.fn.line('$'), '[Parent note](' .. current_filename .. ')')
+
+    -- 5. Prepare the content array
+    -- This defines exactly what the file looks like from top to bottom
+    local content = {
+        "# " .. link_title,
+        os.date('%Y-%m-%d %H:%M'),
+        "", -- One empty line for typing
+        "[Parent note] (" .. current_filename .. ")"
+    }
+
+    -- 0, -1 replaces the entire buffer (including that pesky initial empty line)
+    vim.api.nvim_buf_set_lines(0, 0, -1, false, content)
+
+    -- 6. Position cursor on the empty line (index 3 in the array, but 2 for the API)
+    vim.api.nvim_win_set_cursor(0, {3, 0})
 end, {})
 
 -- =============================================================================
