@@ -2,7 +2,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Gonçalo Nogueira
-	email = jgoncalonogueira@gmail.com
+	email = g.nogueira@kaizengaming.com
 
 [core]
     editor = nvim
@@ -18,6 +18,7 @@
     logg = log --graph --oneline
     unstage = reset HEAD
     dfs = diff --staged
+	mrlab = "!f() { \\\n    remote_url=$(git config --get remote.origin.url | sed -e \"s|git@gitlab.com:|https://gitlab.com/|\" -e \"s|.git$||\"); \\\n    branch=$(git rev-parse --abbrev-ref HEAD); \\\n    open \"${remote_url}/-/merge_requests/new?merge_request[source_branch]=${branch}\"; \\\n}; f"
 [pull]
 	rebase = false
 [merge]
