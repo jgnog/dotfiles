@@ -24,6 +24,7 @@ Plug 'tpope/vim-obsession'
 Plug 'mileszs/ack.vim'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'sersorrel/vim-lilypond'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 call plug#end()
 ]]
 
@@ -395,3 +396,9 @@ vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
     pattern = '*.hcl',
     command = 'set filetype=tf',
 })
+
+-- Markdown preview config
+vim.g.mkdp_auto_close = 0
+vim.g.mkdp_combine_preview = 1
+vim.g.mkdp_combine_preview_auto_refresh = 1
+map('n', '<leader>p', ':MarkdownPreviewToggle<CR>')
