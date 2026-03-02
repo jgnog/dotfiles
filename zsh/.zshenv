@@ -37,3 +37,9 @@ export DEFAULT_MODEL=gpt-4o-mini
 # MacOS
 # Enable color on Mac terminal
 export CLICOLOR=1
+
+# Quick access to config files
+export NVIMCONFIG="$HOME/.config/nvim/init.lua"
+export TMUXCONFIG="$HOME/.tmux.conf"
+export ALIASESCONFIG="$HOME/.config/zsh/aliases"
+export ZSHCONFIG="$HOME/.config/zsh/.zshrc"
