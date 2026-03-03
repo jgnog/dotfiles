@@ -49,7 +49,7 @@ source $HOME/.config/zsh/fzf-completion.zsh
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f $ZDOTDIR/aliases ]; then
-. $ZDOTDIR/aliases
+source $ZDOTDIR/aliases
 fi
 
 source $ZDOTDIR/completion.zsh
