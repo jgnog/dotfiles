@@ -202,7 +202,7 @@ vim.api.nvim_create_user_command('LinkedNote', function()
         "# " .. link_title,
         os.date('%Y-%m-%d %H:%M'),
         "", -- One empty line for typing
-        "[Parent note] (" .. current_filename .. ")"
+        "[Parent note](" .. current_filename .. ")"
     }
 
     -- 0, -1 replaces the entire buffer (including that pesky initial empty line)
