@@ -22,14 +22,16 @@
 [pull]
 	rebase = false
 [merge]
-  tool = vimdiff
+  tool = nvimdiff-merge
 [mergetool]
   prompt = true
-[mergetool "vimdiff"]
+[mergetool "nvimdiff-merge"]
   cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [difftool]
   prompt = false
 [diff]
-  tool = vimdiff
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE
 [rerere]
 	enabled = true
