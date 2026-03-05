@@ -25,6 +25,8 @@ Plug 'mileszs/ack.vim'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'sersorrel/vim-lilypond'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'sindrets/diffview.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 ]]
 
