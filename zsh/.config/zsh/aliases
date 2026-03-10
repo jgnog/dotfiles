@@ -10,7 +10,7 @@ alias mux=tmuxinator
 alias vim=nvim
 alias vi=nvim
 alias bat=batcat
-alias avenv='source venv/bin/activate'
+alias avenv='source .venv/bin/activate'
 alias aptup='sudo apt update && sudo apt upgrade -y'
 alias aws-login='aws-adfs login --profile dundata-dl-dev && export AWS_PROFILE=dundata-dl-dev'
 alias cal='ncal -bw'
