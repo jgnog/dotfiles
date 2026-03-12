@@ -1,7 +1,54 @@
 -- =============================================================================
+-- Basic Configuration
+-- =============================================================================
+
+vim.g.mapleader = ","
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
+vim.g.have_nerd_font = false
+vim.o.number = true
+vim.o.mouse = 'a'
+vim.o.showmode = false
+vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
+vim.o.breakindent = true
+vim.o.undofile = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.signcolumn = 'yes'
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
+vim.o.splitright = true
+vim.o.splitbelow = true
+vim.o.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.o.inccommand = 'split'
+vim.o.cursorline = true
+vim.o.scrolloff = 10
+vim.o.confirm = true
+vim.o.showmatch = true          -- show matching
+vim.o.hlsearch = true           -- highlight search
+vim.o.tabstop = 4               -- number of columns occupied by a tab
+vim.o.softtabstop = 4           -- see multiple spaces as tabstops
+vim.o.expandtab = true          -- converts tabs to white space
+vim.o.shiftwidth = 4            -- width for autoindents
+vim.opt.wildmode = {'longest', 'list'} -- get bash-like tab completions
+vim.o.cc = '80'                 -- set an 80 column border
+vim.cmd('filetype plugin on')
+vim.o.ttyfast = true            -- Speed up scrolling
+vim.o.backup = false            -- No backup files
+vim.o.hidden = true
+vim.o.shortmess:append('atI')   -- Stifle many interruptive prompts
+vim.o.wrap = false              -- Don't wrap long lines
+vim.o.path:append('**')         -- Set path so that finding files works recursively
+vim.o.lazyredraw = true         -- Don't redraw while executing macros
+vim.o.ffs = {'unix', 'dos', 'mac'} -- Use unix line endings
+vim.o.exrc = true               -- Read a local init.vim/lua when starting
+vim.o.wrapscan = false          -- Do not wrap around when searching
+
+-- =============================================================================
 -- Plugin Management (vim-plug)
 -- =============================================================================
--- Keeping vim-plug via vim.cmd. 
+-- Keeping vim-plug via vim.cmd.
 -- Note: Consider migrating to 'lazy.nvim' or 'packer.nvim' for a pure Lua experience.
 vim.cmd [[
 call plug#begin('~/.config/nvim/plugged')
@@ -30,42 +77,6 @@ Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 ]]
 
--- =============================================================================
--- Basic Configuration
--- =============================================================================
-vim.opt.showmatch = true          -- show matching
-vim.opt.ignorecase = true         -- case insensitive
-vim.opt.smartcase = true
-vim.opt.mouse = 'v'               -- middle-click paste with mouse
-vim.opt.hlsearch = true           -- highlight search
-vim.opt.tabstop = 4               -- number of columns occupied by a tab
-vim.opt.softtabstop = 4           -- see multiple spaces as tabstops
-vim.opt.expandtab = true          -- converts tabs to white space
-vim.opt.shiftwidth = 4            -- width for autoindents
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.number = true             -- add line numbers
-vim.opt.wildmode = {'longest', 'list'} -- get bash-like tab completions
-vim.opt.cc = '80'                 -- set an 80 column border
-vim.opt.mouse = 'a'               -- enable mouse click
-vim.opt.clipboard = 'unnamedplus' -- using system clipboard
-vim.cmd('filetype plugin on')
-vim.opt.cursorline = true         -- highlight current cursorline
-vim.opt.ttyfast = true            -- Speed up scrolling
-vim.opt.backup = false            -- No backup files
-vim.opt.hidden = true
-vim.opt.shortmess:append('atI')   -- Stifle many interruptive prompts
-vim.opt.wrap = false              -- Don't wrap long lines
-vim.opt.path:append('**')         -- Set path so that finding files works recursively
-vim.opt.splitbelow = true         -- Open new splits below
-vim.opt.splitright = true         -- Open new splits right
-vim.opt.lazyredraw = true         -- Don't redraw while executing macros
-vim.opt.ffs = {'unix', 'dos', 'mac'} -- Use unix line endings
-vim.opt.exrc = true               -- Read a local init.vim/lua when starting
-vim.opt.wrapscan = false          -- Do not wrap around when searching
-
--- Set leader key to comma
-vim.g.mapleader = ","
 
 -- =============================================================================
 -- Plugin Specific Configurations
@@ -176,41 +187,63 @@ vim.api.nvim_create_user_command('NewNote', function()
     -- vim.cmd('startinsert!')
 end, {})
 
-vim.api.nvim_create_user_command('LinkedNote', function()
+-- List of allowed note types for completion
+local note_types = { "project", "staging", "literature", "permanent" }
+
+vim.api.nvim_create_user_command('LinkedNote', function(opts)
     local current_filename = vim.fn.expand("%")
     local line = vim.api.nvim_get_current_line()
     local col = vim.api.nvim_win_get_cursor(0)[2]
 
-    -- 1. Extract the title from the brackets [Title]
+    -- 1. Determine note type and directory
+    local note_type = (opts.args ~= "" and opts.args) or "project"
+    local folder = note_type .. "/"
+
+    -- 2. Extract the title from the brackets [Title]
     local prefix = line:sub(1, col + 1)
     local link_title = prefix:match("%[([^%]]+)%]%s*$") or "Untitled"
 
-    -- 2. Generate the random hex filename
+    -- 3. Generate the random hex filename
     math.randomseed(os.time())
     local hex_nr = string.format("%x", math.random(0, 16777215))
-    local new_filename = 'n_' .. hex_nr .. '.md'
+    local filename_only = 'n_' .. hex_nr .. '.md'
+    local full_path = folder .. filename_only
 
-    -- 3. Update current line with the link
-    vim.api.nvim_set_current_line(line .. '(' .. new_filename .. ')')
+    -- 4. Ensure the directory exists
+    vim.fn.mkdir(folder, "p")
 
-    -- 4. Create and set up the new file
-    vim.cmd('edit ' .. new_filename)
+    -- 5. Update current line with the link
+    vim.api.nvim_set_current_line(line .. '(' .. full_path .. ')')
 
-    -- 5. Prepare the content array
-    -- This defines exactly what the file looks like from top to bottom
+    -- 6. Create and set up the new file
+    vim.cmd('edit ' .. full_path)
+
+    -- 7. Prepare the content array
+    -- We use ../ to point back to the root where the parent note lives
     local content = {
         "# " .. link_title,
         os.date('%Y-%m-%d %H:%M'),
-        "", -- One empty line for typing
-        "[Parent note](" .. current_filename .. ")"
+        "",
+        "[Parent note](../" .. current_filename .. ")"
     }
 
-    -- 0, -1 replaces the entire buffer (including that pesky initial empty line)
     vim.api.nvim_buf_set_lines(0, 0, -1, false, content)
 
-    -- 6. Position cursor on the empty line (index 3 in the array, but 2 for the API)
+    -- 8. Position cursor on the empty line
     vim.api.nvim_win_set_cursor(0, {3, 0})
-end, {})
+end, {
+    nargs = "?",
+    complete = function(ArgLead, CmdLine, CursorPos)
+        -- Filter the list based on what the user has typed so far
+        local matches = {}
+        for _, t in ipairs(note_types) do
+            if t:sub(1, #ArgLead) == ArgLead then
+                table.insert(matches, t)
+            end
+        end
+        return matches
+    end
+})
 
 -- =============================================================================
 -- Clipboard Configuration (WSL / win32yank)
