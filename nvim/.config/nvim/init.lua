@@ -350,15 +350,15 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- Autocommands & Misc
 -- =============================================================================
 
--- Highlight ExtraWhitespace
-vim.api.nvim_set_hl(0, 'ExtraWhitespace', { bg = 'lightred', ctermbg = 'lightred' })
+-- -- Highlight ExtraWhitespace
+-- vim.api.nvim_set_hl(0, 'ExtraWhitespace', { bg = 'lightred', ctermbg = 'lightred' })
 
-local highlight_ws_group = vim.api.nvim_create_augroup('HighlightWhitespace', { clear = true })
-vim.api.nvim_create_autocmd('BufModifiedSet', {
-    group = highlight_ws_group,
-    pattern = '*',
-    command = [[syn match ExtraWhitespace /\s\+$\| \+\ze\t/]],
-})
+-- local highlight_ws_group = vim.api.nvim_create_augroup('HighlightWhitespace', { clear = true })
+-- vim.api.nvim_create_autocmd('BufModifiedSet', {
+--     group = highlight_ws_group,
+--     pattern = '*',
+--     command = [[syn match ExtraWhitespace /\s\+$\| \+\ze\t/]],
+-- })
 
 -- Fix syntax highlighting
 map('n', '<F12>', '<Esc>:syntax sync fromstart<CR>', { noremap = true })
