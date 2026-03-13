@@ -44,6 +44,21 @@ vim.o.lazyredraw = true         -- Don't redraw while executing macros
 vim.opt.ffs = {'unix', 'dos', 'mac'} -- Use unix line endings
 vim.o.exrc = true               -- Read a local init.vim/lua when starting
 vim.o.wrapscan = false          -- Do not wrap around when searching
+--
+-- =============================================================================
+-- Color Configuration
+-- =============================================================================
+vim.opt.background = 'dark'
+
+-- Check if running on mac to determine termguicolors setting
+if vim.fn.has('mac') == 1 then
+    vim.opt.termguicolors = false
+else
+    vim.opt.termguicolors = true
+end
+
+-- Fallback safely if gruvbox isn't installed yet
+pcall(vim.cmd, 'colorscheme gruvbox')
 
 -- =============================================================================
 -- Plugin Management (vim-plug)
@@ -84,20 +99,6 @@ call plug#end()
 vim.g.slime_target = "tmux"
 vim.g.slime_default_config = { socket_name = "default", target_pane = "{bottom}" }
 
--- =============================================================================
--- Color Configuration
--- =============================================================================
-vim.opt.background = 'dark'
-
--- Check if running on mac to determine termguicolors setting
-if vim.fn.has('mac') == 1 then
-    vim.opt.termguicolors = false
-else
-    vim.opt.termguicolors = true
-end
-
--- Fallback safely if gruvbox isn't installed yet
-pcall(vim.cmd, 'colorscheme gruvbox')
 
 -- =============================================================================
 -- LSP Configuration
