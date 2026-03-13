@@ -377,12 +377,6 @@ map('n', 'L', '$')
 -- Backspace to switch to alternative buffer
 map('n', '<bs>', '<C-^>`"zz')
 
--- Use Esc to get back to normal mode in terminal
-map('t', '<Esc>', '<C-\\><C-n>')
-
--- Open a small horizontal terminal and enter Terminal mode
-map('n', '<leader>t', ':15split term://zsh<CR>i')
-
 -- Use PageUp and PageDown to navigate buffers
 map('n', '<PageUp>', ':bprevious<CR>')
 map('n', '<PageDown>', ':bnext<CR>')
