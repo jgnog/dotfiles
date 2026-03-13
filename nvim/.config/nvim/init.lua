@@ -345,6 +345,19 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+--
+-- Open vim-fugitive buffer
+map('n', '<leader>g', ':G<CR>')
+
+-- Markdown preview config
+vim.g.mkdp_auto_close = 0
+vim.g.mkdp_combine_preview = 1
+vim.g.mkdp_combine_preview_auto_refresh = 1
+map('n', '<leader>p', ':MarkdownPreviewToggle<CR>')
+
+-- Fix syntax highlighting
+map('n', '<F12>', '<Esc>:syntax sync fromstart<CR>', { noremap = true })
+
 
 -- =============================================================================
 -- Autocommands & Misc
@@ -360,20 +373,8 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 --     command = [[syn match ExtraWhitespace /\s\+$\| \+\ze\t/]],
 -- })
 
--- Fix syntax highlighting
-map('n', '<F12>', '<Esc>:syntax sync fromstart<CR>', { noremap = true })
-
--- Open vim-fugitive buffer
-map('n', '<leader>g', ':G<CR>')
-
 -- Highlight .hcl files as .tf files
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
     pattern = '*.hcl',
     command = 'set filetype=tf',
 })
-
--- Markdown preview config
-vim.g.mkdp_auto_close = 0
-vim.g.mkdp_combine_preview = 1
-vim.g.mkdp_combine_preview_auto_refresh = 1
-map('n', '<leader>p', ':MarkdownPreviewToggle<CR>')
