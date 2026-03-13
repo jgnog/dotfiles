@@ -363,9 +363,6 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- Fix syntax highlighting
 map('n', '<F12>', '<Esc>:syntax sync fromstart<CR>', { noremap = true })
 
--- Folding with Regex search
-map('n', '<leader>zs', ':setlocal foldexpr=(getline(v:lnum)=~@/)?0:(getline(v:lnum-1)=~@/)\\|\\|(getline(v:lnum+1)=~@/)?1:2 foldmethod=expr foldlevel=0 foldcolumn=2<CR>')
-
 -- Markdown fenced languages
 vim.g.markdown_fenced_languages = {'html', 'python', 'ruby', 'vim', 'c'}
 
