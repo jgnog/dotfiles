@@ -363,9 +363,6 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- Fix syntax highlighting
 map('n', '<F12>', '<Esc>:syntax sync fromstart<CR>', { noremap = true })
 
--- Markdown fenced languages
-vim.g.markdown_fenced_languages = {'html', 'python', 'ruby', 'vim', 'c'}
-
 -- Open vim-fugitive buffer
 map('n', '<leader>g', ':G<CR>')
 
