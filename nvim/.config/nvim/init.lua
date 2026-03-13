@@ -37,11 +37,11 @@ vim.cmd('filetype plugin on')
 vim.o.ttyfast = true            -- Speed up scrolling
 vim.o.backup = false            -- No backup files
 vim.o.hidden = true
-vim.o.shortmess:append('atI')   -- Stifle many interruptive prompts
 vim.o.wrap = false              -- Don't wrap long lines
-vim.o.path:append('**')         -- Set path so that finding files works recursively
+vim.opt.shortmess:append('atI')   -- Stifle many interruptive prompts
+vim.opt.path:append('**')         -- Set path so that finding files works recursively
 vim.o.lazyredraw = true         -- Don't redraw while executing macros
-vim.o.ffs = {'unix', 'dos', 'mac'} -- Use unix line endings
+vim.opt.ffs = {'unix', 'dos', 'mac'} -- Use unix line endings
 vim.o.exrc = true               -- Read a local init.vim/lua when starting
 vim.o.wrapscan = false          -- Do not wrap around when searching
 
