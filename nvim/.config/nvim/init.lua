@@ -365,7 +365,7 @@ require("lazy").setup({
 		---@diagnostic disable-next-line: missing-fields
 		opts = {
 			-- delay between pressing a key and opening which-key (milliseconds)
-			delay = 200,
+			delay = 500,
 			icons = { mappings = vim.g.have_nerd_font },
 
 			-- Document existing key chains
