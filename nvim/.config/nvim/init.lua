@@ -40,7 +40,7 @@ vim.o.ttyfast = true -- Speed up scrolling
 vim.o.backup = false -- No backup files
 vim.o.hidden = true
 vim.o.wrap = false -- Don't wrap long lines
-vim.opt.shortmess:append("atI") -- Stifle many interruptive prompts
+vim.opt.shortmess:append("atIA") -- Stifle many interruptive prompts
 vim.opt.path:append("**") -- Set path so that finding files works recursively
 vim.o.lazyredraw = true -- Don't redraw while executing macros
 vim.opt.ffs = { "unix", "dos", "mac" } -- Use unix line endings
