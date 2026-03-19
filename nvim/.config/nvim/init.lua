@@ -1164,3 +1164,15 @@ require('mini.operators').setup(
 		replace = { prefix = 'cr' }
 	}
 )
+require('mini.basics').setup({
+	options = {
+		basic = true,
+		extra_ui = true,
+	},
+	mappings = {
+		windows = true,
+	},
+	autocommands = {
+		relnum_in_visual_mode = true
+	},
+})
