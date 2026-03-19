@@ -1159,3 +1159,8 @@ require('gitsigns').setup(
 
 require('mini.icons').setup()
 require('mini.tabline').setup()
+require('mini.operators').setup(
+	{
+		replace = { prefix = 'cr' }
+	}
+)
