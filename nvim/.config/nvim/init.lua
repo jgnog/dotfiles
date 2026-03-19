@@ -255,9 +255,6 @@ vim.g.mkdp_combine_preview = 1
 vim.g.mkdp_combine_preview_auto_refresh = 1
 map("n", "<leader>p", ":MarkdownPreviewToggle<CR>")
 
--- Fix syntax highlighting
-map("n", "<F12>", "<Esc>:syntax sync fromstart<CR>", { noremap = true })
-
 -- =============================================================================
 -- Autocommands & Misc
 -- =============================================================================
