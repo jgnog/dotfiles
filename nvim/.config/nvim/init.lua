@@ -1158,3 +1158,4 @@ require('gitsigns').setup(
 )
 
 require('mini.icons').setup()
+require('mini.tabline').setup()
