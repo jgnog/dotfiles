@@ -1157,3 +1157,4 @@ require('gitsigns').setup(
 	}
 )
 
+require('mini.icons').setup()
