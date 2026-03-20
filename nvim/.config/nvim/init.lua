@@ -269,12 +269,6 @@ map("n", "<leader>p", ":MarkdownPreviewToggle<CR>")
 --     command = [[syn match ExtraWhitespace /\s\+$\| \+\ze\t/]],
 -- })
 
--- Highlight .hcl files as .tf files
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-	pattern = "*.hcl",
-	command = "set filetype=tf",
-})
-
 -- =============================================================================
 -- Plugin Management (vim-plug)
 -- =============================================================================
