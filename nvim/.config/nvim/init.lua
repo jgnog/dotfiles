@@ -1170,3 +1170,4 @@ require('mini.basics').setup({
 		relnum_in_visual_mode = true
 	},
 })
+require('mini.align').setup()
