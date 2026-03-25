@@ -260,15 +260,10 @@ map("n", "<leader>p", ":MarkdownPreviewToggle<CR>")
 -- Autocommands & Misc
 -- =============================================================================
 
--- -- Highlight ExtraWhitespace
--- vim.api.nvim_set_hl(0, 'ExtraWhitespace', { bg = 'lightred', ctermbg = 'lightred' })
-
--- local highlight_ws_group = vim.api.nvim_create_augroup('HighlightWhitespace', { clear = true })
--- vim.api.nvim_create_autocmd('BufModifiedSet', {
---     group = highlight_ws_group,
---     pattern = '*',
---     command = [[syn match ExtraWhitespace /\s\+$\| \+\ze\t/]],
--- })
+if vim.fn.executable('rg') == 1 then
+  vim.o.grepprg = "rg --vimgrep --smart-case --hidden"
+  vim.o.grepformat = "%f:%l:%c:%m"
+end
 
 -- =============================================================================
 -- Plugin Management (vim-plug)
