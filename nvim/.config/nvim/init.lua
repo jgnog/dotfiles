@@ -266,6 +266,19 @@ if vim.fn.executable('rg') == 1 then
   vim.o.grepformat = "%f:%l:%c:%m"
 end
 
+vim.api.nvim_create_user_command('Rg', function(opts)
+
+	local args = opts.fargs
+	local pattern = args[1]
+	local path = args[2] or "."
+
+	local target_path = vim.fn.expand(path)
+
+	vim.cmd(string.format("silent grep! %s %s", pattern, target_path))
+	vim.cmd('copen')
+	vim.cmd('redraw!')
+end, { nargs = "+", complete = "file" })
+
 -- =============================================================================
 -- Plugin Management (vim-plug)
 -- =============================================================================
