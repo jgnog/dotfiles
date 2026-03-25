@@ -1,3 +1,4 @@
+alias dotenv='set -a; source .env; set +a'
 alias start_dbx_cluster='databricks clusters start -p ai-common-dev --no-wait $DATABRICKS_PERSONAL_CLUSTER_ID'
 alias get_dbx_cluster="databricks clusters get -p ai-common-dev  $DATABRICKS_PERSONAL_CLUSTER_ID | jq '{"cluster_id", "cluster_name", "state"}'"
 alias c='clear'
