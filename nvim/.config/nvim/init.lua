@@ -71,7 +71,7 @@ vim.g.netrw_preview = 1 -- Vertical split default for preview
 vim.g.netrw_winsize = 20
 
 -- =============================================================================
--- Custom Commands (Note generation)
+-- Custom Commands
 -- =============================================================================
 
 -- Converted NewNote function to Lua
