@@ -262,7 +262,13 @@ map("n", "<leader>p", ":MarkdownPreviewToggle<CR>")
 
 -- Use ripgrep as the engine for :grep
 if vim.fn.executable('rg') == 1 then
-  vim.o.grepprg = "rg --vimgrep --smart-case --hidden"
+  -- [[
+	  --vimgrep print each match in its own line
+	  --smart-case case-sensitive only if string contains uppercase letters
+	  --hidden include hidden files
+	  --ignore but still ignore everything in .gitignore
+  --]]
+  vim.o.grepprg = "rg --vimgrep --smart-case --hidden --ignore"
   vim.o.grepformat = "%f:%l:%c:%m"
 end
 
