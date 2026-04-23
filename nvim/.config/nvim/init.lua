@@ -1192,3 +1192,7 @@ require('mini.basics').setup({
 	},
 })
 require('mini.align').setup()
+
+require('mini.bufremove').setup()
+
+map('n', '<leader>bd', MiniBufremove.delete, { desc = "Delete the current buffer" })
