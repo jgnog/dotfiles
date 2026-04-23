@@ -1,6 +1,6 @@
 ---
 description: Answers quick questions very concisely
-mode: primary
+mode: subagent
 model: github-copilot/gemini-3-flash-preview
 temperature: 0.1
 permission:
