@@ -19,6 +19,7 @@ PATH="$HOME/.opencode/bin:$PATH"
 PATH="/opt/homebrew/bin:$PATH"
 PATH="$PATH:/opt/nvim/bin"
 PATH="$JAVA_HOME/bin:$PATH"
+PATH="/Library/TeX/texbin:$PATH"
 export PATH
 
 # Note-taking system
