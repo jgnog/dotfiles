@@ -11,11 +11,14 @@ export HISTCONTROL=ignoreboth
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+export JAVA_HOME="$(brew --prefix openjdk@17)"
+
 PATH="$HOME/bin:$HOME/.local/bin:$HOME/.config/local/bin:$HOME/.poetry/bin:$HOME/.cargo/bin:$PATH"
 PATH="$PATH:/opt/nvim-linux64/bin"
 PATH="$HOME/.opencode/bin:$PATH"
 PATH="/opt/homebrew/bin:$PATH"
 PATH="$PATH:/opt/nvim/bin"
+PATH="$JAVA_HOME/bin:$PATH"
 export PATH
 
 # Note-taking system
