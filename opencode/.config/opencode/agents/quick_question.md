@@ -1,7 +1,7 @@
 ---
 description: Answers quick questions very concisely
-mode: subagent
-model: github-copilot/gemini-3-flash-preview
+mode: primary
+model: github-copilot/claude-sonnet-4.6
 temperature: 0.1
 permission:
   edit: deny
