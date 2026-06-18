@@ -254,6 +254,7 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 vim.g.mkdp_auto_close = 0
 vim.g.mkdp_combine_preview = 1
 vim.g.mkdp_combine_preview_auto_refresh = 1
+vim.g.mkdp_images_path = os.getenv("PWD")
 map("n", "<leader>p", ":MarkdownPreviewToggle<CR>")
 
 -- =============================================================================
