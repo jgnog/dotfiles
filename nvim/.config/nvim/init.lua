@@ -1032,6 +1032,16 @@ require("lazy").setup({
 	{ "sindrets/diffview.nvim" },
 
 
+	{
+	  "ruifm/gitlinker.nvim",
+	  dependencies = { "nvim-lua/plenary.nvim" },
+	  config = function()
+		require("gitlinker").setup({
+		  mappings = "<leader>gy" -- Copies the shareable URL to your clipboard
+		})
+	  end
+	},
+
 }, { ---@diagnostic disable-line: missing-fields
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
