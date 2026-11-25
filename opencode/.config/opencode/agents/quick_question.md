@@ -1,7 +1,7 @@
 ---
 description: Answers quick questions very concisely
 mode: primary
-model: github-copilot/claude-sonnet-5
+model: github-copilot/gpt-6-luna
 temperature: 0.1
 permission:
   edit: deny
