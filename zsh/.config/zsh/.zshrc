@@ -38,6 +38,10 @@ stripbreaks () {
     awk 'BEGIN {RS=""; FS="\n"; ORS="\n\n"} {gsub(/\n/, " ", $0); print}' "$@"
 }
 
+dbsync () {
+    databricks sync --exclude-from .gitignore --exclude-from .git/info/exclude --watch . $1
+}
+
 # Add fzf keybindings
 source $HOME/.config/zsh/fzf-key-bindings.zsh
 # Add fzf auto-completion
