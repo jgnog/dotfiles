@@ -11,7 +11,9 @@ export HISTCONTROL=ignoreboth
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-export JAVA_HOME="$(brew --prefix openjdk@17)"
+export SDKMAN_DIR="$HOME/.sdkman"
+export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 PATH="$HOME/bin:$HOME/.local/bin:$HOME/.config/local/bin:$HOME/.poetry/bin:$HOME/.cargo/bin:$PATH"
 PATH="$PATH:/opt/nvim-linux64/bin"
