@@ -223,6 +223,8 @@ map("n", "<bs>", '<C-^>`"zz')
 map("n", "<PageUp>", ":bprevious<CR>")
 map("n", "<PageDown>", ":bnext<CR>")
 
+map("n", "<leader>d", ":DiffviewOpen")
+
 -- Diagnostic Config & Keymaps
 -- See :help vim.diagnostic.Opts
 vim.diagnostic.config({
